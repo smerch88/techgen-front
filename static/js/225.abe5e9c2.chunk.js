@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktechgen_front=self.webpackChunktechgen_front||[]).push([[225],{225:function(e,n,t){t.r(n);var c=t(184);n.default=function(){return(0,c.jsx)("div",{children:(0,c.jsx)("h1",{children:"Job page"})})}}}]);
+//# sourceMappingURL=225.abe5e9c2.chunk.js.map
