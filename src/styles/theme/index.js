@@ -1,0 +1,213 @@
+import { createTheme } from '@mui/material';
+import MontserratBoldTtf from './fonts/Montserrat/Montserrat-Bold.ttf';
+import GilroyRegularTtf from './fonts/Gilroy/Gilroy-Regular.ttf';
+import GilroyMediumTtf from './fonts/Gilroy/Gilroy-Medium.ttf';
+import GilroySemiBoldTtf from './fonts/Gilroy/Gilroy-SemiBold.ttf';
+import GilroyBoldTtf from './fonts/Gilroy/Gilroy-Bold.ttf';
+
+const theme = createTheme({
+  breakpoints: {
+    keys: ["xs", "sm", "md", "lg"],
+    values: {
+      xs: 0,
+      sm: 320,
+      md: 768,
+      lg: 1240
+    }
+  },
+  palette: {
+    colorList: {
+      blackPearl: "#06051E",
+      sanMarino: "#4C58A2",
+      boulder: "rgba(120, 120, 120, 0.22)",
+      wildSand: "#F5F5F5",
+      portGore: "#1B1839",
+      darkBlue: "#1B1839",
+      haiti: "#221040",
+      seance: "#710E8E",
+      barossa: "#49012E",
+      violentViolet: "#280963",
+      blackRock: "#140339",
+    },
+    primary: {
+      main: '#06051e',
+      light: '#01001F',
+      contrastText: '#F5F5F5',
+    },
+    background: {
+      default: '#221040',
+      paper: 'rgba(120, 120, 120, 0.22)',
+    },
+    text: {
+      primary: '#F5F5F5',
+      secondary: '#4C58A2',
+    },
+    secondary: {
+      main: '#710E8E',
+    },
+    error: {
+      main: '#49012E',
+    },
+  },
+  typography: {
+    htmlFontSize: 16,
+    fontFamily: 'Gilroy',
+    fontSize: 16,
+  },
+});
+
+
+theme.components = {
+  //connecting fonts
+  MuiCssBaseline: {
+    styleOverrides: `
+        @font-face {
+          font-family: 'Montserrat';
+          src: url(${MontserratBoldTtf}) format('truetype');
+        }
+        @font-face {
+          font-family: 'Gilroy';
+          src: url(${GilroyRegularTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 400;
+        }
+        @font-face {
+          font-family: 'Gilroy';
+          src: url(${GilroyMediumTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 500;
+        }
+        @font-face {
+          font-family: 'Gilroy';
+          src: url(${GilroySemiBoldTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 600;
+        }
+        @font-face {
+          font-family: 'Gilroy';
+          src: url(${GilroyBoldTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 700;
+        }
+      `,
+  },
+  MuiContainer: {
+    defaultProps: {
+      sx: {
+        /*temporary props*/
+        '@media (min-width: 1365.95px)': {
+          padding: "0 24px"
+        },
+        [theme.breakpoints.up("lg")]: {
+          padding: "0 180px",
+        },
+        /* end temporary props*/
+
+        [theme.breakpoints.down("lg")]: {
+          padding: "0 32px",
+        },
+        [theme.breakpoints.down("md")]: {
+          padding: "0 16px",
+        },
+      }
+    }
+  },
+  MuiGrid: {
+    defaultProps: {
+      spacing: "24px"
+    }
+  },
+  MuiGrid2: {
+    defaultProps: {
+      spacing: "24px"
+    }
+  },
+  MuiButton: {
+    variants: [
+      {
+        props: { variant: 'techgen' },
+        style: {
+          color: theme.palette.colorList.wildSand,
+          background: `linear-gradient(180deg, ${theme.palette.colorList.sanMarino}, ${theme.palette.colorList.sanMarino} )`,
+          '&:hover': {
+            background: `linear-gradient(180deg, #5353A2 0%, #644DA2 100%);`
+          },
+          '&:disabled': {
+            color: theme.palette.colorList.wildSand,
+            background: theme.palette.colorList.boulder
+          }
+        },
+      },
+    ],
+    defaultProps: {
+      variant: "techgen",
+      size: "medium",
+    },
+    styleOverrides: {
+      root: ({ ownerState, theme }) => ({
+        borderRadius: "16px",
+        boxShadow: "0px 7px 12px rgba(0, 0, 0, 0.25)",
+        height: 40,
+        padding: "0 32px",
+        [theme.breakpoints.down("md")]: {
+          height: 28,
+          padding: "0 8px",
+        },
+        ...(ownerState.size === 'large' && {
+          height: 54,
+          padding: "0 66px",
+          fontSize: 20,
+          [theme.breakpoints.down("md")]: {
+            height: 40,
+            fontSize: 14,
+            padding: "0 16px",
+          },
+        }),
+        ...(ownerState.size === 'small' && {
+          height: 40,
+          padding: "0 13px",
+          boxShadow: "none",
+          [theme.breakpoints.down("md")]: {
+            height: 28,
+            padding: "0 8px",
+          },
+        }),
+      }),
+    }
+  },
+}
+
+//typography settings
+theme.typography.h1 = {
+  fontSize: "48px",
+  fontWeight: 700,
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "24px"
+  },
+  [theme.breakpoints.down("md")]: {
+    fontSize: "20px"
+  },
+};
+theme.typography.h2 = {
+  fontSize: "28px",
+  fontWeight: 700,
+  [theme.breakpoints.down("md")]: {
+    fontSize: "18px"
+  },
+};
+theme.typography.h3 = {
+  fontSize: "24px",
+  fontWeight: 600,
+  [theme.breakpoints.down("md")]: {
+    fontSize: "16px"
+  },
+};
+theme.typography.button = {
+  fontSize: "16px",
+  fontWeight: 500,
+  [theme.breakpoints.down("md")]: {
+    fontSize: "14px"
+  },
+}
+
+export default theme;
