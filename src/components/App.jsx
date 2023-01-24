@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Header from './Header/Header';
 import { Layout } from './Layout';
 
 const BlogPage = lazy(() => import('../pages/Blog'));
@@ -14,6 +15,7 @@ const UsefulPage = lazy(() => import('../pages/Useful'));
 export const App = () => {
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
