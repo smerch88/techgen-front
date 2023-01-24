@@ -7,12 +7,13 @@ import GilroyBoldTtf from './fonts/Gilroy/Gilroy-Bold.ttf';
 
 const theme = createTheme({
   breakpoints: {
-    keys: ["xs", "sm", "md", "lg"],
+    keys: ["xs", "sm", "md", "lg", "xl"],
     values: {
-      xs: 0,
-      sm: 320,
+      xs: 320,
+      sm: 480,
       md: 768,
-      lg: 1240
+      lg: 1240,
+      xl: 1920
     }
   },
   palette: {
@@ -94,20 +95,15 @@ theme.components = {
   MuiContainer: {
     defaultProps: {
       sx: {
-        /*temporary props*/
-        '@media (min-width: 1365.95px)': {
+        padding: "0 16px",
+        [theme.breakpoints.up("xl")]: {
           padding: "0 24px"
         },
         [theme.breakpoints.up("lg")]: {
-          padding: "0 180px",
+          padding: "0 180px"
         },
-        /* end temporary props*/
-
-        [theme.breakpoints.down("lg")]: {
+        [theme.breakpoints.up("md")]: {
           padding: "0 32px",
-        },
-        [theme.breakpoints.down("md")]: {
-          padding: "0 16px",
         },
       }
     }
@@ -147,29 +143,29 @@ theme.components = {
       root: ({ ownerState, theme }) => ({
         borderRadius: "16px",
         boxShadow: "0px 7px 12px rgba(0, 0, 0, 0.25)",
-        height: 40,
-        padding: "0 32px",
-        [theme.breakpoints.down("md")]: {
-          height: 28,
-          padding: "0 8px",
+        height: 28,
+        padding: "0 8px",
+        [theme.breakpoints.up("md")]: {
+          height: 40,
+          padding: "0 32px",
         },
         ...(ownerState.size === 'large' && {
-          height: 54,
-          padding: "0 66px",
-          fontSize: 20,
-          [theme.breakpoints.down("md")]: {
-            height: 40,
-            fontSize: 14,
-            padding: "0 16px",
+          height: 40,
+          fontSize: 14,
+          padding: "0 16px",
+          [theme.breakpoints.up("md")]: {
+            height: 54,
+            fontSize: 20,
+            padding: "0 66px",
           },
         }),
         ...(ownerState.size === 'small' && {
-          height: 40,
-          padding: "0 13px",
+          height: 28,
+          padding: "0 8px",
           boxShadow: "none",
-          [theme.breakpoints.down("md")]: {
-            height: 28,
-            padding: "0 8px",
+          [theme.breakpoints.up("md")]: {
+            height: 40,
+            padding: "0 13px",
           },
         }),
       }),
@@ -179,34 +175,34 @@ theme.components = {
 
 //typography settings
 theme.typography.h1 = {
-  fontSize: "48px",
+  fontSize: "20px",
   fontWeight: 700,
-  [theme.breakpoints.down("lg")]: {
-    fontSize: "24px"
+  [theme.breakpoints.up("md")]: {
+    fontSize: "40px"
   },
-  [theme.breakpoints.down("md")]: {
-    fontSize: "20px"
+  [theme.breakpoints.up("lg")]: {
+    fontSize: "48px"
   },
 };
 theme.typography.h2 = {
-  fontSize: "28px",
+  fontSize: "18px",
   fontWeight: 700,
-  [theme.breakpoints.down("md")]: {
-    fontSize: "18px"
+  [theme.breakpoints.up("md")]: {
+    fontSize: "28px"
   },
 };
 theme.typography.h3 = {
-  fontSize: "24px",
+  fontSize: "16px",
   fontWeight: 600,
-  [theme.breakpoints.down("md")]: {
-    fontSize: "16px"
+  [theme.breakpoints.up("md")]: {
+    fontSize: "24px"
   },
 };
 theme.typography.button = {
-  fontSize: "16px",
+  fontSize: "14px",
   fontWeight: 500,
-  [theme.breakpoints.down("md")]: {
-    fontSize: "14px"
+  [theme.breakpoints.up("md")]: {
+    fontSize: "16px"
   },
 }
 
