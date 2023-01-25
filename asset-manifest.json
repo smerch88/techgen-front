@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/techgen-front/static/js/main.e38542e3.js",
+    "main.js": "/techgen-front/static/js/main.fa3e5b1d.js",
     "static/js/148.4e1b175a.chunk.js": "/techgen-front/static/js/148.4e1b175a.chunk.js",
-    "static/js/42.371ef352.chunk.js": "/techgen-front/static/js/42.371ef352.chunk.js",
+    "static/js/42.04da77c6.chunk.js": "/techgen-front/static/js/42.04da77c6.chunk.js",
     "static/js/415.aaecc54a.chunk.js": "/techgen-front/static/js/415.aaecc54a.chunk.js",
     "static/js/225.abe5e9c2.chunk.js": "/techgen-front/static/js/225.abe5e9c2.chunk.js",
     "static/js/314.dd842a37.chunk.js": "/techgen-front/static/js/314.dd842a37.chunk.js",
@@ -15,9 +15,9 @@
     "static/media/Gilroy-SemiBold.ttf": "/techgen-front/static/media/Gilroy-SemiBold.6780292641f883b3dad3.ttf",
     "static/media/Gilroy-Bold.ttf": "/techgen-front/static/media/Gilroy-Bold.b900325e44ec0c673e88.ttf",
     "index.html": "/techgen-front/index.html",
-    "main.e38542e3.js.map": "/techgen-front/static/js/main.e38542e3.js.map",
+    "main.fa3e5b1d.js.map": "/techgen-front/static/js/main.fa3e5b1d.js.map",
     "148.4e1b175a.chunk.js.map": "/techgen-front/static/js/148.4e1b175a.chunk.js.map",
-    "42.371ef352.chunk.js.map": "/techgen-front/static/js/42.371ef352.chunk.js.map",
+    "42.04da77c6.chunk.js.map": "/techgen-front/static/js/42.04da77c6.chunk.js.map",
     "415.aaecc54a.chunk.js.map": "/techgen-front/static/js/415.aaecc54a.chunk.js.map",
     "225.abe5e9c2.chunk.js.map": "/techgen-front/static/js/225.abe5e9c2.chunk.js.map",
     "314.dd842a37.chunk.js.map": "/techgen-front/static/js/314.dd842a37.chunk.js.map",
@@ -26,6 +26,6 @@
     "391.e27a7de6.chunk.js.map": "/techgen-front/static/js/391.e27a7de6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e38542e3.js"
+    "static/js/main.fa3e5b1d.js"
   ]
 }

@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/42.371ef352.chunk.js","mappings":"oIAQA,UARoB,WAClB,OACE,0BACE,8CAGL,C","sources":["pages/Development.jsx"],"sourcesContent":["const Development = () => {\n  return (\n    <div>\n      <h1>Development page</h1>\n    </div>\n  );\n};\n\nexport default Development;\n"],"names":[],"sourceRoot":""}
