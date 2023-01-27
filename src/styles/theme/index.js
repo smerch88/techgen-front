@@ -123,12 +123,31 @@ theme.components = {
         props: { variant: 'techgen' },
         style: {
           color: theme.palette.colorList.wildSand,
-          background: `linear-gradient(180deg, ${theme.palette.colorList.sanMarino}, ${theme.palette.colorList.sanMarino} )`,
+          background: theme.palette.colorList.sanMarino,
           '&:hover': {
-            background: `linear-gradient(180deg, #5353A2 0%, #644DA2 100%);`,
+            background: theme.palette.colorList.sanMarino,
+            boxShadow: '0px 0px 12px rgba(245, 245, 245, 0.25)',
           },
           '&:disabled': {
-            color: theme.palette.colorList.wildSand,
+            color: theme.palette.colorList.wildSand + '80',
+            background: theme.palette.colorList.boulder,
+          },
+        },
+      },
+      {
+        props: { variant: 'techgen', color: 'gradient' },
+        style: {
+          background: 'linear-gradient(180deg, #5353A2 0%, #644DA2 100%)',
+          '&:hover': {
+            background: `linear-gradient(180deg, #5353A2 0%, #644DA2 100%)`,
+          },
+        },
+      },
+      {
+        props: { variant: 'techgen', color: 'transparent' },
+        style: {
+          background: theme.palette.colorList.boulder,
+          '&:hover': {
             background: theme.palette.colorList.boulder,
           },
         },

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post';
+import { Box } from '@mui/material';
 import axios from 'axios';
 
 const PostsList = () => {
@@ -14,11 +15,11 @@ const PostsList = () => {
   }, []);
 
   return (
-    <>
+    <Box sx={{ marginBottom: '324px' }}>
       {posts.map(post => (
         <Post key={post.id} {...post} />
       ))}
-    </>
+    </Box>
   );
 };
 

@@ -1,69 +1,32 @@
 import React from 'react';
-import { useTheme } from '@mui/system';
-import { Box, Grid, Typography, TextField, Button } from '@mui/material';
+import { Container, Box, Grid } from '@mui/material';
 import PostsList from 'components/PostsList/PostsList';
+import Filters from 'components/Filters/Filters';
+import Heading from 'components/Heading/Heading';
+
+import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
 
 const Blog = () => {
-  const theme = useTheme();
   return (
-    <Box sx={{ maxWidth: 880, margin: '0 auto' }}>
-      <Grid container md={12}>
-        <Grid item md={1}></Grid>
-        <Grid item container md={11} space={0}>
-          <Typography variant="h3" sx={{ marginBottom: '40px' }}>
-            Blog
-          </Typography>
-          <Grid sx={{ marginBottom: '80px' }} container item>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: '100%',
-              }}
-            >
-              <Button
-                style={{
-                  backgroundColor: theme.palette.colorList.boulder,
-                }}
-                variant="contained"
-                size="small"
-                onClick={event =>
-                  (event.target.style.backgroundColor =
-                    theme.palette.colorList.darkPearl)
-                }
-              >
-                Filter
-              </Button>
-              <Button size="small">Newest</Button>
-              <Button size="small">TopRated</Button>
-              <TextField
-                sx={{
-                  width: '53%',
-                  borderRadius: 16,
-                  border: '1px solid #4c58a2',
-                  filter: 'drop-shadow(0 7px 12px rgba(0, 0, 0, 0.25))',
-                }}
-                id="outlined-basic"
-                placeholder="search"
-                variant="standard"
-                inputProps={{
-                  style: {
-                    padding: '10px 15px',
-                  },
-                }}
-                InputProps={{
-                  disableUnderline: true,
-                }}
-              />
-            </Box>
-          </Grid>
-          <Grid item container>
-            <PostsList />
-          </Grid>
-        </Grid>
-      </Grid>
-    </Box>
+    <Grid container xs={12} sx={{ margin: '0 auto' }}>
+      <Grid item lg={1} md={0}></Grid>
+      <Container xl={11} lg={11} md={12}>
+        <Heading />
+        <Filters />
+        <Box>
+          <PostsList />
+        </Box>
+      </Container>
+      <Box
+        sx={{
+          position: 'fixed',
+          right: { lg: '180px', md: '32px', xs: '16px' },
+          bottom: '40px',
+        }}
+      >
+        <ArrowUp width="30" height="26" />
+      </Box>
+    </Grid>
   );
 };
 
