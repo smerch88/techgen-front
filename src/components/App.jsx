@@ -10,6 +10,8 @@ const MentorshipPage = lazy(() => import('../pages/Mentorship'));
 const ProfilePage = lazy(() => import('../pages/Profile'));
 const RoadmapsPage = lazy(() => import('../pages/Roadmaps'));
 const UsefulPage = lazy(() => import('../pages/Useful'));
+const SignInPage = lazy(() => import('../pages/SignIn'));
+const SignUpPage = lazy(() => import('../pages/SignUp'));
 
 export const App = () => {
   return (
@@ -18,6 +20,8 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/sign-in" element={<SignInPage />} />
+          <Route path="/sign-up" element={<SignUpPage />} />
           <Route path="/development" element={<DevelopmentPage />} />
           <Route path="/job" element={<JobPage />} />
           <Route path="/mentorship" element={<MentorshipPage />} />
