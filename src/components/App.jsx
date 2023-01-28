@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 
-const BlogPage = lazy(() => import('../pages/Blog/Blog'));
+const BlogPage = lazy(() => import('../pages/blog/Blog'));
 const DevelopmentPage = lazy(() => import('../pages/Development'));
 const HomePage = lazy(() => import('../pages/Home'));
 const JobPage = lazy(() => import('../pages/Job'));

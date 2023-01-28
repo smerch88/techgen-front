@@ -1,9 +1,9 @@
 import { Button, Grid, TextField } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { ReactComponent as FilterIcon } from 'images/icons/filter.svg';
-import { ReactComponent as NewestIcon } from 'images/icons/newest.svg';
-import { ReactComponent as RatedIcon } from 'images/icons/rated.svg';
+import { ReactComponent as FilterIcon } from 'images/icons/filter-icon.svg';
+import { ReactComponent as NewestIcon } from 'images/icons/newest-icon.svg';
+import { ReactComponent as RatedIcon } from 'images/icons/top-rated-icon.svg';
 
 const Filters = () => {
   const theme = useTheme();

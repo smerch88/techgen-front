@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Box, Grid } from '@mui/material';
-import PostsList from 'components/PostsList/PostsList';
-import Filters from 'components/Filters/Filters';
-import Heading from 'components/Heading/Heading';
+import PostsList from 'components/postsList/PostsList';
+import Filters from 'components/filters/Filters';
+import Heading from 'components/heading/Heading';
 
 import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
 
