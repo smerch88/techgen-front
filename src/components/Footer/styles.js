@@ -8,18 +8,18 @@ export const styles = {
         bgcolor: "primary.main"
     },
     img: {
-        width: "7vw",
+        width: "5vw",
         [theme.breakpoints.up("sm")]: {
-            width: "4vw"
-        },
-        [theme.breakpoints.up("md")]: {
             width: "3.5vw"
         },
+        [theme.breakpoints.up("md")]: {
+            width: "2.2vw"
+        },
         [theme.breakpoints.up("lg")]: {
-            width: "3vw"
+            width: "1.8vw"
         },
         [theme.breakpoints.up("xl")]: {
-            width: "2vw"
+            width: "1.4vw"
         },
         
     },
