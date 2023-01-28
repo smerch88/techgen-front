@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
+import { Footer } from './Footer/Footer';
 
 const BlogPage = lazy(() => import('../pages/Blog'));
 const DevelopmentPage = lazy(() => import('../pages/Development'));
@@ -27,6 +28,7 @@ export const App = () => {
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
+      <Footer/>
     </>
   );
 };
