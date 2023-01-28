@@ -3,8 +3,7 @@ import { Container, Box, Grid } from '@mui/material';
 import PostsList from 'components/postsList/PostsList';
 import Filters from 'components/filters/Filters';
 import Heading from 'components/heading/Heading';
-
-import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
+import { BackTop } from './backTop.styled';
 
 const Blog = () => {
   return (
@@ -17,15 +16,7 @@ const Blog = () => {
           <PostsList />
         </Box>
       </Container>
-      <Box
-        sx={{
-          position: 'fixed',
-          right: { lg: '180px', md: '32px', xs: '16px' },
-          bottom: '40px',
-        }}
-      >
-        <ArrowUp width="30" height="26" />
-      </Box>
+      <BackTop />
     </Grid>
   );
 };
