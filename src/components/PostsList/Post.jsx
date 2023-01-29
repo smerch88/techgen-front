@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import { useTheme } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { StyledPost } from './post.styled';
