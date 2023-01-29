@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Box, Grid } from '@mui/material';
-import PostsList from 'components/postsList/PostsList';
-import Filters from 'components/filters/Filters';
-import Heading from 'components/heading/Heading';
 import { BackTop } from './backTop.styled';
+import Heading from 'components/Heading/Heading';
+import Filters from 'components/Filters/Filters';
+import PostsList from 'components/PostsList/PostsList';
 
 const Blog = () => {
   return (
