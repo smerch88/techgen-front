@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/424.7d9df4ee.chunk.js","mappings":"uIAQA,UARiB,WACf,OACE,0BACE,2CAGL,C","sources":["pages/Roadmaps.jsx"],"sourcesContent":["const Roadmaps = () => {\n  return (\n    <div>\n      <h1>Roadmaps page</h1>\n    </div>\n  );\n};\n\nexport default Roadmaps;\n"],"names":[],"sourceRoot":""}

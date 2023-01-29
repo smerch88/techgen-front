@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktechgen_front=self.webpackChunktechgen_front||[]).push([[314],{8314:function(e,n,t){t.r(n);var r=t(184);n.default=function(){return(0,r.jsx)("div",{children:(0,r.jsx)("h1",{children:"Mentorship page"})})}}}]);
+//# sourceMappingURL=314.39a35a71.chunk.js.map

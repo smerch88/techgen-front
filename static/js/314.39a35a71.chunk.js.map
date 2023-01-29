@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/314.39a35a71.chunk.js","mappings":"uIAQA,UARmB,WACjB,OACE,0BACE,6CAGL,C","sources":["pages/Mentorship.jsx"],"sourcesContent":["const Mentorship = () => {\n  return (\n    <div>\n      <h1>Mentorship page</h1>\n    </div>\n  );\n};\n\nexport default Mentorship;\n"],"names":[],"sourceRoot":""}
