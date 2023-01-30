@@ -66,21 +66,16 @@ const dataArray = [
   }
 ];
 
-const Text = styled(Typography)(({theme}) => ({
-  opacity: '0.6',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '14px'
-  }
-}));
-
-const DateText = styled(Text)(({theme}) => ({
-  position: 'relative',
-  [theme.breakpoints.up('md')]: {
-    position: 'absolute',
-    right: 24,
-    top: 24
-  }
-}));
+const DateText = (props) => (
+  <Typography variant="body2" sx={(theme) => ({
+    position: 'relative',
+    [theme.breakpoints.up('md')]: {
+      position: 'absolute',
+      right: 24,
+      top: 24
+    },
+  })} {...props}/>
+);
 
 const Item = styled(Paper)({
   borderRadius: '16px',
@@ -101,16 +96,16 @@ const Vacancy = ({ data }) => (
     <Box>
       <DateText>{data.date}</DateText>
       <Typography variant="h3" fontWeight="600">{data.name}</Typography>
-      <Text>{data.description}</Text>
+      <Typography variant="body2">{data.description}</Typography>
     </Box>
     <Box display="flex" alignItems="center" gap="24px" marginTop="32px">
       <CompanyLogo src={data.company.logo} alt={data.company.name} />
       <Box display="flex" flexDirection="column" justifyContent="space-between" gap="20px">
         <Typography fontWeight="400">{data.company.name}</Typography>
         <Box display="flex" gap="5px 40px" flexWrap="wrap">
-          <Text>i {data.company.type}</Text>
-          <Text>i {data.company.language}</Text>
-          <Text>i {data.company.experience}</Text>
+          <Typography variant="body2">i {data.company.type}</Typography>
+          <Typography variant="body2">i {data.company.language}</Typography>
+          <Typography variant="body2">i {data.company.experience}</Typography>
         </Box>
       </Box>
     </Box>

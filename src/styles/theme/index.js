@@ -50,11 +50,6 @@ const theme = createTheme({
       main: '#49012E',
     },
   },
-  typography: {
-    htmlFontSize: 16,
-    fontFamily: 'Gilroy',
-    fontSize: 16,
-  },
 });
 
 theme.components = {
@@ -202,6 +197,18 @@ theme.typography.caption = {
   }
 }
 
+theme.typography.body1 = {
+  htmlFontSize: 16,
+  fontFamily: 'Gilroy',
+  fontSize: 14,
+  fontWeight: 400,
+  [theme.breakpoints.up('md')]: {
+    fontSize: '16px',
+  },
+};
+theme.typography.body2 = {
+  opacity: 0.6
+};
 theme.typography.h1 = {
   fontSize: '20px',
   fontWeight: 700,
