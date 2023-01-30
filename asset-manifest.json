@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/techgen-front/static/js/main.fb4146b5.js",
+    "main.js": "/techgen-front/static/js/main.ee9a24a6.js",
     "static/js/737.86f59092.chunk.js": "/techgen-front/static/js/737.86f59092.chunk.js",
     "static/js/42.1cfd4dfe.chunk.js": "/techgen-front/static/js/42.1cfd4dfe.chunk.js",
     "static/js/415.f66f0db8.chunk.js": "/techgen-front/static/js/415.f66f0db8.chunk.js",
@@ -11,28 +11,28 @@
     "static/js/391.bca9239c.chunk.js": "/techgen-front/static/js/391.bca9239c.chunk.js",
     "static/js/61.5e7ab4f5.chunk.js": "/techgen-front/static/js/61.5e7ab4f5.chunk.js",
     "static/js/571.452bc306.chunk.js": "/techgen-front/static/js/571.452bc306.chunk.js",
-    "static/js/153.95e1d1e8.chunk.js": "/techgen-front/static/js/153.95e1d1e8.chunk.js",
+    "static/js/153.0d1c87b3.chunk.js": "/techgen-front/static/js/153.0d1c87b3.chunk.js",
     "static/js/773.b74c2529.chunk.js": "/techgen-front/static/js/773.b74c2529.chunk.js",
     "static/js/662.a19bdc6c.chunk.js": "/techgen-front/static/js/662.a19bdc6c.chunk.js",
-    "static/js/363.02509ac5.chunk.js": "/techgen-front/static/js/363.02509ac5.chunk.js",
+    "static/js/615.4f254e0d.chunk.js": "/techgen-front/static/js/615.4f254e0d.chunk.js",
     "static/media/Montserrat-Bold.ttf": "/techgen-front/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
     "static/media/Gilroy-Medium.ttf": "/techgen-front/static/media/Gilroy-Medium.f9f832b0ed3f1ab138c9.ttf",
     "static/media/Gilroy-Regular.ttf": "/techgen-front/static/media/Gilroy-Regular.b91b0127c56a8e5f9e83.ttf",
     "static/media/Gilroy-SemiBold.ttf": "/techgen-front/static/media/Gilroy-SemiBold.6780292641f883b3dad3.ttf",
     "static/media/Gilroy-Bold.ttf": "/techgen-front/static/media/Gilroy-Bold.b900325e44ec0c673e88.ttf",
-    "static/media/instagram 1.svg": "/techgen-front/static/media/instagram 1.09eeaa7a5c1c46f1ca91be376b203e36.svg",
-    "static/media/tik-tok 1.svg": "/techgen-front/static/media/tik-tok 1.e1f52b89a3df649c490a55e6cee4b93f.svg",
-    "static/media/121 1.svg": "/techgen-front/static/media/121 1.9ea7a90cc054e5fb43d0bc938200305a.svg",
+    "static/media/instagram_logo.svg": "/techgen-front/static/media/instagram_logo.09eeaa7a5c1c46f1ca91be376b203e36.svg",
+    "static/media/tiktok_logo.svg": "/techgen-front/static/media/tiktok_logo.e1f52b89a3df649c490a55e6cee4b93f.svg",
+    "static/media/telegram_logo.svg": "/techgen-front/static/media/telegram_logo.9ea7a90cc054e5fb43d0bc938200305a.svg",
     "static/media/views.svg": "/techgen-front/static/media/views.0c0e43ca4f87861acb7209ef6390fec8.svg",
     "static/media/search.svg": "/techgen-front/static/media/search.760e5497a78ca9fd0b6af953cd1289e9.svg",
-    "static/media/youtube 1.svg": "/techgen-front/static/media/youtube 1.90b8ad77a9e290ef57ae2f0883533159.svg",
+    "static/media/youtube_logo.svg": "/techgen-front/static/media/youtube_logo.90b8ad77a9e290ef57ae2f0883533159.svg",
     "static/media/top-rated-icon.svg": "/techgen-front/static/media/top-rated-icon.e015bf2d47e9e9ad3709b46fc967ab6b.svg",
     "static/media/filter-icon.svg": "/techgen-front/static/media/filter-icon.f92b4f0c33512fa012b408ae8350a8f5.svg",
     "static/media/newest-icon.svg": "/techgen-front/static/media/newest-icon.029f24a5a24876dc4ec766822bc3de73.svg",
     "index.html": "/techgen-front/index.html",
     "static/media/arrowUp.svg": "/techgen-front/static/media/arrowUp.6d337701f9928a85deca36bc83e2cee2.svg",
     "static/media/CheckBoxIcon.svg": "/techgen-front/static/media/CheckBoxIcon.2d03e756353d2b38fdd410b2ed455b85.svg",
-    "main.fb4146b5.js.map": "/techgen-front/static/js/main.fb4146b5.js.map",
+    "main.ee9a24a6.js.map": "/techgen-front/static/js/main.ee9a24a6.js.map",
     "737.86f59092.chunk.js.map": "/techgen-front/static/js/737.86f59092.chunk.js.map",
     "42.1cfd4dfe.chunk.js.map": "/techgen-front/static/js/42.1cfd4dfe.chunk.js.map",
     "415.f66f0db8.chunk.js.map": "/techgen-front/static/js/415.f66f0db8.chunk.js.map",
@@ -43,12 +43,12 @@
     "391.bca9239c.chunk.js.map": "/techgen-front/static/js/391.bca9239c.chunk.js.map",
     "61.5e7ab4f5.chunk.js.map": "/techgen-front/static/js/61.5e7ab4f5.chunk.js.map",
     "571.452bc306.chunk.js.map": "/techgen-front/static/js/571.452bc306.chunk.js.map",
-    "153.95e1d1e8.chunk.js.map": "/techgen-front/static/js/153.95e1d1e8.chunk.js.map",
+    "153.0d1c87b3.chunk.js.map": "/techgen-front/static/js/153.0d1c87b3.chunk.js.map",
     "773.b74c2529.chunk.js.map": "/techgen-front/static/js/773.b74c2529.chunk.js.map",
     "662.a19bdc6c.chunk.js.map": "/techgen-front/static/js/662.a19bdc6c.chunk.js.map",
-    "363.02509ac5.chunk.js.map": "/techgen-front/static/js/363.02509ac5.chunk.js.map"
+    "615.4f254e0d.chunk.js.map": "/techgen-front/static/js/615.4f254e0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.fb4146b5.js"
+    "static/js/main.ee9a24a6.js"
   ]
 }
