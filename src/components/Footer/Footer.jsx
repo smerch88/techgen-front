@@ -1,10 +1,10 @@
 import React from 'react';
 import { Paper, Typography, Link } from '@mui/material';
 import { Box } from '@mui/material';
-import instagram_logo from '../../images/icons/instagram 1.svg'
-import telegram_logo from '../../images/icons/121 1.svg'
-import tiktok_logo from '../../images/icons/tik-tok 1.svg'
-import youtube_logo from '../../images/icons/youtube 1.svg'
+import instagram_logo from '../../images/icons/instagram_logo.svg'
+import telegram_logo from '../../images/icons/telegram_logo.svg'
+import tiktok_logo from '../../images/icons/tiktok_logo.svg'
+import youtube_logo from '../../images/icons/youtube_logo.svg'
 import { styles } from './styles';
 export const Footer = () => {
   const logos_paths = [
