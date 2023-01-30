@@ -13,7 +13,7 @@ export const Logo = styled((props) => (
 ))`
     width: 5vw;
     ${theme.breakpoints.up("sm")} {
-        width: 3.5vw
+        width: 3vw
     };
     ${theme.breakpoints.up("md")} {
         width: 2.2vw
