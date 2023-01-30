@@ -32,11 +32,10 @@ export const Footer = () => {
     <>
     <FooterContainer>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography variant="caption">
+            <Typography>
               &#169; TECHGEN - {new Date().getFullYear()}
             </Typography>
           </Box>
-
           <LogosList logos_paths = {logos_paths}/>
       </FooterContainer>
     </>

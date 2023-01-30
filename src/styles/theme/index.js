@@ -187,16 +187,6 @@ theme.components = {
 };
 
 //typography settings
-theme.typography.caption = {
-  fontWeight: 200,
-  [theme.breakpoints.up("xs")]: {
-    fontSize: "14px"
-  },
-  [theme.breakpoints.up("md")]: {
-    fontSize: "16px"
-  }
-}
-
 theme.typography.body1 = {
   htmlFontSize: 16,
   fontFamily: 'Gilroy',
