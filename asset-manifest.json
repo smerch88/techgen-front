@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/techgen-front/static/js/main.ee9a24a6.js",
+    "main.js": "/techgen-front/static/js/main.409fb81c.js",
     "static/js/737.86f59092.chunk.js": "/techgen-front/static/js/737.86f59092.chunk.js",
-    "static/js/42.1cfd4dfe.chunk.js": "/techgen-front/static/js/42.1cfd4dfe.chunk.js",
+    "static/js/975.678ef268.chunk.js": "/techgen-front/static/js/975.678ef268.chunk.js",
     "static/js/415.f66f0db8.chunk.js": "/techgen-front/static/js/415.f66f0db8.chunk.js",
     "static/js/274.a54adf79.chunk.js": "/techgen-front/static/js/274.a54adf79.chunk.js",
     "static/js/314.39a35a71.chunk.js": "/techgen-front/static/js/314.39a35a71.chunk.js",
@@ -26,15 +26,22 @@
     "static/media/views.svg": "/techgen-front/static/media/views.0c0e43ca4f87861acb7209ef6390fec8.svg",
     "static/media/search.svg": "/techgen-front/static/media/search.760e5497a78ca9fd0b6af953cd1289e9.svg",
     "static/media/youtube_logo.svg": "/techgen-front/static/media/youtube_logo.90b8ad77a9e290ef57ae2f0883533159.svg",
+    "static/media/Development.svg": "/techgen-front/static/media/Development.4c8398e33a485a611d6f6160dff8785c.svg",
     "static/media/top-rated-icon.svg": "/techgen-front/static/media/top-rated-icon.e015bf2d47e9e9ad3709b46fc967ab6b.svg",
+    "static/media/Helpful.svg": "/techgen-front/static/media/Helpful.d769aa7159ee2b41b5659368bd13d651.svg",
+    "static/media/Profiles.svg": "/techgen-front/static/media/Profiles.1ef3c7e365fa6a7144788d44cfd18365.svg",
+    "static/media/Mentorship.svg": "/techgen-front/static/media/Mentorship.f4e037cbbb9e458b5adaa1217dd36774.svg",
+    "static/media/Blog.svg": "/techgen-front/static/media/Blog.8941d72ce6972d6a5f85faf18121aafe.svg",
+    "static/media/Roadmaps.svg": "/techgen-front/static/media/Roadmaps.1900a8723833e78403a895ad6ca828da.svg",
     "static/media/filter-icon.svg": "/techgen-front/static/media/filter-icon.f92b4f0c33512fa012b408ae8350a8f5.svg",
     "static/media/newest-icon.svg": "/techgen-front/static/media/newest-icon.029f24a5a24876dc4ec766822bc3de73.svg",
+    "static/media/Vacancies.svg": "/techgen-front/static/media/Vacancies.dc59c9c5c12e1a44666517fcfda48ead.svg",
     "index.html": "/techgen-front/index.html",
     "static/media/arrowUp.svg": "/techgen-front/static/media/arrowUp.6d337701f9928a85deca36bc83e2cee2.svg",
     "static/media/CheckBoxIcon.svg": "/techgen-front/static/media/CheckBoxIcon.2d03e756353d2b38fdd410b2ed455b85.svg",
-    "main.ee9a24a6.js.map": "/techgen-front/static/js/main.ee9a24a6.js.map",
+    "main.409fb81c.js.map": "/techgen-front/static/js/main.409fb81c.js.map",
     "737.86f59092.chunk.js.map": "/techgen-front/static/js/737.86f59092.chunk.js.map",
-    "42.1cfd4dfe.chunk.js.map": "/techgen-front/static/js/42.1cfd4dfe.chunk.js.map",
+    "975.678ef268.chunk.js.map": "/techgen-front/static/js/975.678ef268.chunk.js.map",
     "415.f66f0db8.chunk.js.map": "/techgen-front/static/js/415.f66f0db8.chunk.js.map",
     "274.a54adf79.chunk.js.map": "/techgen-front/static/js/274.a54adf79.chunk.js.map",
     "314.39a35a71.chunk.js.map": "/techgen-front/static/js/314.39a35a71.chunk.js.map",
@@ -49,6 +56,6 @@
     "615.4f254e0d.chunk.js.map": "/techgen-front/static/js/615.4f254e0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.ee9a24a6.js"
+    "static/js/main.409fb81c.js"
   ]
 }
