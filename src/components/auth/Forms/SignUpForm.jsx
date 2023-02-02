@@ -1,9 +1,11 @@
-import { Button, Checkbox, FormControlLabel, Typography } from '@mui/material';
+import { Checkbox, FormControlLabel, Typography } from '@mui/material';
 import { useState } from 'react';
 import { ReactComponent as CheckBoxIcon } from '../../../images/icons/CheckBoxIcon.svg';
 import { Controller, useForm } from 'react-hook-form';
 import { validEmail } from 'shared/regex';
-import AuthField from '../AuthField/AuthField';
+import AuthField from '../AuthField.styled';
+import AuthButton from '../AuthButton.styled';
+import theme from 'styles/theme';
 
 const SignUpForm = () => {
   const [isAgreed, setIsAgreed] = useState(false);
@@ -11,8 +13,8 @@ const SignUpForm = () => {
     mode: 'onChange',
   });
 
-  const onSubmit = data => {
-    //register login
+  const onSubmit = ({ email, password }) => {
+    //register logic
   };
 
   return (
@@ -32,7 +34,8 @@ const SignUpForm = () => {
               placeholder="email"
               value={value || ''}
               onChange={onChange}
-              error={errors.email}
+              required
+              helperText={errors.email?.message}
             />
           );
         }}
@@ -53,7 +56,8 @@ const SignUpForm = () => {
               type="password"
               value={value || ''}
               onChange={onChange}
-              error={errors.password}
+              required
+              helperText={errors.password?.message}
             />
           );
         }}
@@ -75,18 +79,28 @@ const SignUpForm = () => {
               type="password"
               value={value || ''}
               onChange={onChange}
-              error={errors.repeatPassword}
+              required
+              helperText={errors.repeatPassword?.message}
             />
           );
         }}
       />
       <FormControlLabel
-        sx={{ fontSize: '12px' }}
         control={
           <Checkbox
-            icon={<CheckBoxIcon width={10} height={10} fill={'#F5F5F5'} />}
+            icon={
+              <CheckBoxIcon
+                width={10}
+                height={10}
+                fill={`${theme.palette.colorList.wildSand}`}
+              />
+            }
             checkedIcon={
-              <CheckBoxIcon width={10} height={10} fill={'#4C58A2'} />
+              <CheckBoxIcon
+                width={10}
+                height={10}
+                fill={`${theme.palette.colorList.sanMarino}`}
+              />
             }
             required
             name="isAgreed"
@@ -94,17 +108,11 @@ const SignUpForm = () => {
             onChange={() => setIsAgreed(prev => !prev)}
           />
         }
-        label={
-          <Typography variant="caption">I agree with Privacy Policy</Typography>
-        }
+        label={<Typography>I agreed with Privacy Policy</Typography>}
       />
-      <Button
-        type="submit"
-        sx={{ margin: '40px 0', display: 'block' }}
-        disabled={!isAgreed}
-      >
+      <AuthButton type="submit" disabled={!isAgreed}>
         Sign Up
-      </Button>
+      </AuthButton>
     </form>
   );
 };

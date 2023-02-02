@@ -1,7 +1,7 @@
-import { Button } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
 import { validEmail } from 'shared/regex';
-import AuthField from '../AuthField/AuthField';
+import AuthButton from '../AuthButton.styled';
+import AuthField from '../AuthField.styled';
 
 const SignInForm = () => {
   const { control, handleSubmit } = useForm({
@@ -9,7 +9,7 @@ const SignInForm = () => {
   });
 
   const onSubmit = data => {
-    //login login
+    //login logic
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -28,7 +28,8 @@ const SignInForm = () => {
               placeholder="email"
               value={value || ''}
               onChange={onChange}
-              error={errors.email}
+              required
+              helperText={errors.email?.message}
             />
           );
         }}
@@ -48,15 +49,14 @@ const SignInForm = () => {
               placeholder="password"
               type="password"
               value={value || ''}
+              required
               onChange={onChange}
-              error={errors.password}
+              helperText={errors.password?.message}
             />
           );
         }}
       />
-      <Button type="submit" sx={{ margin: '40px 0' }}>
-        Sign in
-      </Button>
+      <AuthButton type="submit">Sing in</AuthButton>
     </form>
   );
 };
