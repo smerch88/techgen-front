@@ -1,6 +1,8 @@
+import Sidebar from 'components/Sidebar/Sidebar';
 const Development = () => {
   return (
     <section class="development">
+      <Sidebar />
       <div class="container">
         <h3>Development</h3>
         <ul>
