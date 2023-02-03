@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
-import Auth from 'components/Auth/Auth';
-import AuthLink from 'components/Auth/AuthLink.styled';
-import SignUpForm from 'components/Auth/Forms/SignUpForm';
+import Auth from 'components/auth/Auth';
+import AuthLink from 'components/auth/AuthLink.styled';
+import SignUpForm from 'components/auth/Forms/SignUpForm';
 
 const SignUp = () => {
   return (
