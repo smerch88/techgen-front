@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktechgen_front=self.webpackChunktechgen_front||[]).push([[424],{2424:function(e,n,t){t.r(n);var c=t(184);n.default=function(){return(0,c.jsx)("div",{children:(0,c.jsx)("h1",{children:"Roadmaps page"})})}}}]);
-//# sourceMappingURL=424.7d9df4ee.chunk.js.map
