@@ -9,7 +9,7 @@ const HomePage = lazy(() => import('../pages/Home'));
 const JobPage = lazy(() => import('../pages/Job'));
 const MentorshipPage = lazy(() => import('../pages/Mentorship'));
 const ProfilePage = lazy(() => import('../pages/Profile'));
-const RoadmapsPage = lazy(() => import('../pages/Roadmaps'));
+const RoadmapsPage = lazy(() => import('../pages/Roadmaps/Roadmaps'));
 const UsefulPage = lazy(() => import('../pages/Useful'));
 const SignInPage = lazy(() => import('../pages/SignIn'));
 const SignUpPage = lazy(() => import('../pages/SignUp'));
