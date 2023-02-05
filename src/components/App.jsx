@@ -13,6 +13,7 @@ const RoadmapsPage = lazy(() => import('../pages/Roadmaps'));
 const UsefulPage = lazy(() => import('../pages/Useful'));
 const SignInPage = lazy(() => import('../pages/SignIn'));
 const SignUpPage = lazy(() => import('../pages/SignUp'));
+const AboutUsPage = lazy(() => import('pages/AboutUs/AboutUs'));
 
 export const App = () => {
   return (
@@ -29,6 +30,7 @@ export const App = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/roadmaps" element={<RoadmapsPage />} />
           <Route path="/useful" element={<UsefulPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
