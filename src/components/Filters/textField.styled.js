@@ -16,6 +16,7 @@ export const StyledTextField = styled(props => (
       InputProps={{
         disableUnderline: true,
       }}
+      fullWidth
       {...props}
     />
   </Grid>
