@@ -1,16 +1,39 @@
+import React, { useEffect } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Controller, useForm } from 'react-hook-form';
 import { validEmail } from 'shared/regex';
+import jwt_decode from 'jwt-decode';
 import AuthButton from '../AuthButton.styled';
 import AuthField from '../AuthField.styled';
+import auth from 'gateway/auth';
+import { useDispatch } from 'react-redux';
+import { signIn } from 'redux/auth/sliceAuth';
 
 const SignInForm = () => {
-  const { control, handleSubmit } = useForm({
+  const dispatch = useDispatch();
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState,
+    formState: { isSubmitSuccessful },
+  } = useForm({
     mode: 'onChange',
   });
 
-  const onSubmit = data => {
-    //login logic
+  const onSubmit = async ({ email, password }) => {
+    const {
+      user: { accessToken },
+    } = await signInWithEmailAndPassword(auth, email, password);
+    dispatch(signIn(jwt_decode(accessToken)));
   };
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ email: '', password: '' });
+    }
+  }, [formState, isSubmitSuccessful, reset]);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Controller
