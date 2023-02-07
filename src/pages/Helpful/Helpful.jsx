@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../../components/Sidebar/Sidebar';
+import Sidebar from 'components/Sidebar/Sidebar';
 import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
 import { Container, Typography } from '@mui/material';
-import getHelpfuls from './api';
+import getHelpfuls from '../../services/helpful-api';
 import { Image, Item, Wrapper, BoxWrapper, List, Div } from './helpful.styled';
 const Helpful = () => {
-  const [helpfuls, setHelpfuls] = useState([]);
+  const [articles, setArticles] = useState([]);
   useEffect(() => {
     getHelpfuls()
       .then(data => {
-        setHelpfuls(data);
+        setArticles(data);
       })
 
       .catch(error => console.warn(error));
@@ -21,7 +21,7 @@ const Helpful = () => {
         <Typography variant="h2">Helpful</Typography>
 
         <List>
-          {helpfuls.map(({ id, title, text, pictures }) => (
+          {articles.map(({ id, title, text, pictures }) => (
             <Item key={id}>
               <Image
                 src="../../images/icons/Rectangle.jpg"

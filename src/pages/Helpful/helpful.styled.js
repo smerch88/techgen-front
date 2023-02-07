@@ -34,5 +34,6 @@ export const Image = styled('img')({
   borderRadius: '16px',
 });
 export const Div = styled('div')({
-  float: 'right',
+  display: 'flex',
+  justifyContent: 'right',
 });
