@@ -120,16 +120,6 @@ theme.components = {
       },
     },
   },
-  MuiGrid: {
-    defaultProps: {
-      spacing: '24px',
-    },
-  },
-  MuiGrid2: {
-    defaultProps: {
-      spacing: '24px',
-    },
-  },
   MuiButton: {
     variants: [
       {
@@ -218,7 +208,7 @@ theme.typography.body1 = {
   },
 };
 theme.typography.body2 = {
-  opacity: 0.6
+  opacity: 0.6,
 };
 theme.typography.h1 = {
   fontSize: '20px',

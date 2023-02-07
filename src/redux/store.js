@@ -1,7 +1,37 @@
-import { configureStore } from '@reduxjs/toolkit';
-import roadmaps from './roadmaps/roadmapsSlice';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import storage from 'redux-persist/lib/storage';
+import {
+  persistReducer,
+  persistStore,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+import authReducer from './auth/sliceAuth';
 
-export const store = configureStore({
-  reducer: {roadmaps},
-  devTools: true
+const persistConfig = {
+  key: 'root',
+  storage,
+};
+
+const appReducers = combineReducers({
+  auth: authReducer,
 });
+
+const persistedReducer = persistReducer(persistConfig, appReducers);
+
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+
+export const persistor = persistStore(store);
+export default store;
