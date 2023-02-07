@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { Footer } from './Footer/Footer';
@@ -17,7 +17,7 @@ const AboutUsPage = lazy(() => import('pages/AboutUs/AboutUs'));
 
 export const App = () => {
   return (
-    <>
+    <Suspense fallback={<></>}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -35,6 +35,6 @@ export const App = () => {
         </Route>
       </Routes>
       <Footer />
-    </>
+    </Suspense>
   );
 };

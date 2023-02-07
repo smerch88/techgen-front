@@ -1,11 +1,13 @@
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { Checkbox, FormControlLabel, Typography } from '@mui/material';
 import { useState } from 'react';
-import { ReactComponent as CheckBoxIcon } from '../../../images/icons/CheckBoxIcon.svg';
+import { ReactComponent as CheckBoxIcon } from 'images/icons/CheckBoxIcon.svg';
 import { Controller, useForm } from 'react-hook-form';
 import { validEmail } from 'shared/regex';
 import AuthField from '../AuthField.styled';
 import AuthButton from '../AuthButton.styled';
 import theme from 'styles/theme';
+import auth from 'gateway/auth';
 
 const SignUpForm = () => {
   const [isAgreed, setIsAgreed] = useState(false);
@@ -14,7 +16,7 @@ const SignUpForm = () => {
   });
 
   const onSubmit = ({ email, password }) => {
-    //register logic
+    createUserWithEmailAndPassword(auth, email, password);
   };
 
   return (
