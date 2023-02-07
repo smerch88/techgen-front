@@ -11,6 +11,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import authReducer from './auth/sliceAuth';
+import roadmaps from './roadmaps/roadmapsSlice';
 
 const persistConfig = {
   key: 'root',
@@ -19,6 +20,8 @@ const persistConfig = {
 
 const appReducers = combineReducers({
   auth: authReducer,
+  roadmaps: roadmaps,
+  devTools: true,
 });
 
 const persistedReducer = persistReducer(persistConfig, appReducers);
