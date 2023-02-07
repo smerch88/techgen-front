@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/techgen-front/static/js/main.afd3eceb.js",
-    "static/js/862.77ee31de.chunk.js": "/techgen-front/static/js/862.77ee31de.chunk.js",
+    "main.js": "/techgen-front/static/js/main.0e327778.js",
+    "static/js/862.bc62ac73.chunk.js": "/techgen-front/static/js/862.bc62ac73.chunk.js",
     "static/js/561.89b46123.chunk.js": "/techgen-front/static/js/561.89b46123.chunk.js",
     "static/js/415.f66f0db8.chunk.js": "/techgen-front/static/js/415.f66f0db8.chunk.js",
     "static/js/861.747cd7af.chunk.js": "/techgen-front/static/js/861.747cd7af.chunk.js",
@@ -54,8 +54,8 @@
     "index.html": "/techgen-front/index.html",
     "static/media/arrowUp.svg": "/techgen-front/static/media/arrowUp.6d337701f9928a85deca36bc83e2cee2.svg",
     "static/media/CheckBoxIcon.svg": "/techgen-front/static/media/CheckBoxIcon.2d03e756353d2b38fdd410b2ed455b85.svg",
-    "main.afd3eceb.js.map": "/techgen-front/static/js/main.afd3eceb.js.map",
-    "862.77ee31de.chunk.js.map": "/techgen-front/static/js/862.77ee31de.chunk.js.map",
+    "main.0e327778.js.map": "/techgen-front/static/js/main.0e327778.js.map",
+    "862.bc62ac73.chunk.js.map": "/techgen-front/static/js/862.bc62ac73.chunk.js.map",
     "561.89b46123.chunk.js.map": "/techgen-front/static/js/561.89b46123.chunk.js.map",
     "415.f66f0db8.chunk.js.map": "/techgen-front/static/js/415.f66f0db8.chunk.js.map",
     "861.747cd7af.chunk.js.map": "/techgen-front/static/js/861.747cd7af.chunk.js.map",
@@ -74,6 +74,6 @@
     "263.65335ffa.chunk.js.map": "/techgen-front/static/js/263.65335ffa.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.afd3eceb.js"
+    "static/js/main.0e327778.js"
   ]
 }
