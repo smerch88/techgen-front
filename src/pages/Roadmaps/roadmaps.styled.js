@@ -5,6 +5,9 @@ export const Title = styled(Typography)(({theme}) => ({
     [theme.breakpoints.down('lg')]: {
         fontSize: "28px !important",
     },
+    [theme.breakpoints.down('md')]: {
+        fontSize: "18px !important",
+    },
     [theme.breakpoints.down('xs')]: {
         fontSize: "18px !important",
     },
@@ -19,5 +22,5 @@ export const Filters = styled(Box)(({theme}) => ({
     },
     [theme.breakpoints.down('md')]: {
         gap: "12px",
-    },
+    }
 }));
