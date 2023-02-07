@@ -10,7 +10,7 @@ const JobPage = lazy(() => import('../pages/Job'));
 const MentorshipPage = lazy(() => import('../pages/Mentorship'));
 const ProfilePage = lazy(() => import('../pages/Profile'));
 const RoadmapsPage = lazy(() => import('../pages/Roadmaps/Roadmaps'));
-const UsefulPage = lazy(() => import('../pages/Useful'));
+const HelpfulPage = lazy(() => import('../pages/Helpful/Helpful'));
 const SignInPage = lazy(() => import('../pages/SignIn'));
 const SignUpPage = lazy(() => import('../pages/SignUp'));
 const AboutUsPage = lazy(() => import('pages/AboutUs/AboutUs'));
@@ -29,7 +29,7 @@ export const App = () => {
           <Route path="/mentorship" element={<MentorshipPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/roadmaps" element={<RoadmapsPage />} />
-          <Route path="/useful" element={<UsefulPage />} />
+          <Route path="/helpful" element={<HelpfulPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="*" element={<HomePage />} />
         </Route>
