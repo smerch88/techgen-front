@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-import theme from 'styles/theme';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, styled } from '@mui/material';
 import { BackTop } from './backTop.styled';
 import Heading from 'components/Heading/Heading';
 import Filters from 'components/Filters/Filters';
@@ -18,25 +16,25 @@ const StyledBlog = styled(props => (
     </Grid>
     <BackTop />
   </Grid>
-))`
-  display: flex;
-  margin: 0 auto;
+))(({ theme }) => ({
+  display: 'flex',
+  margin: '0 auto',
 
-  ${theme.breakpoints.up('xs')} {
-    padding: 0 16px;
-  }
+  [theme.breakpoints.up('xs')]: {
+    padding: '0 16px',
+  },
 
-  ${theme.breakpoints.up('md')} {
-    padding: 0 32px;
-  }
+  [theme.breakpoints.up('md')]: {
+    padding: '0 32px',
+  },
 
-  ${theme.breakpoints.up('lg')} {
-    max-width: 944px;
-  }
+  [theme.breakpoints.up('lg')]: {
+    maxWidth: '944px',
+  },
 
-  ${theme.breakpoints.up('xl')} {
-    max-width: 1264px;
-  }
-`;
+  [theme.breakpoints.up('xl')]: {
+    maxWidth: '1264px',
+  },
+}));
 
 export default StyledBlog;
