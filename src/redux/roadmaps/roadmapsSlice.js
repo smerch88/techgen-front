@@ -1,19 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { roadMapsInstance } from 'api';
 
 const initialState = {
   roadmaps: [],
   roadmapsLoadingStatus: 'idle',
 };
 
-const instance = axios.create({
-  baseURL: 'https://63e0f76559bb472a742d424b.mockapi.io/roadmaps',
-});
-
 export const fetchRoadmaps = createAsyncThunk(
   'roadmaps/fetchRoadmaps',
   async () => {
-    const data = await instance
+    const data = await roadMapsInstance
       .get()
       .then(res => res.data)
       .catch(error => {

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post';
 import { Box } from '@mui/material';
-import axios from 'axios';
+
+import { blogInstance } from 'api';
 
 const PostsList = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     (async () => {
-      const response = await axios.get(
-        'https://63cecea06d27349c2b76151b.mockapi.io/blogs'
-      );
+      const response = await blogInstance.get();
       setPosts(response.data);
     })();
   }, []);
