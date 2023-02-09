@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { Footer } from './Footer/Footer';
+import { Header } from './Header/Header';
 
 const BlogPage = lazy(() => import('../pages/Blog/Blog'));
 const DevelopmentPage = lazy(() => import('../pages/Development'));
@@ -17,6 +18,7 @@ const SignUpPage = lazy(() => import('../pages/SignUp'));
 export const App = () => {
   return (
     <>
+    <Header/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
