@@ -3,13 +3,13 @@ import {
   Button,
   Collapse,
   Container,
-  Paper,
   Stack,
-  styled,
   Typography,
 } from '@mui/material';
 import company from 'images/temp/company1.png';
 import { useState } from 'react';
+import { CompanyLogo, CompanyTag, HeadContainer, Item, MarginBox, SearchInput } from 'pages/Job/job.styled';
+import { GlobeSimple, MapPin, Clock } from "phosphor-react";
 
 const dataArray = [
   {
@@ -66,36 +66,13 @@ const dataArray = [
   }
 ];
 
-const DateText = (props) => (
-  <Typography variant="body2" sx={(theme) => ({
-    position: 'relative',
-    [theme.breakpoints.up('md')]: {
-      position: 'absolute',
-      right: 24,
-      top: 24
-    },
-  })} {...props}/>
-);
-
-const Item = styled(Paper)({
-  borderRadius: '16px',
-  padding: '24px',
-  position: 'relative',
-});
-
-const CompanyLogo = styled('img')({
-  width: '60px',
-  height: '60px',
-  borderRadius: '50%',
-  objectFit: 'cover',
-  objectPosition: 'center',
-});
-
 const Vacancy = ({ data }) => (
   <Item sx={{padding: '24px'}}>
     <Box>
-      <DateText>{data.date}</DateText>
-      <Typography variant="h3" fontWeight="600">{data.name}</Typography>
+      <Box sx={{display: 'grid', gridTemplateColumns: '1fr max-content', marginBottom: {xl: '24px', xs: '12px'}}}>
+        <Typography variant="h3" fontWeight="600">{data.name}</Typography>
+        <Typography variant="body2">{data.date}</Typography>
+      </Box>
       <Typography variant="body2">{data.description}</Typography>
     </Box>
     <Box display="flex" alignItems="center" gap="24px" marginTop="32px">
@@ -103,41 +80,34 @@ const Vacancy = ({ data }) => (
       <Box display="flex" flexDirection="column" justifyContent="space-between" gap="20px">
         <Typography fontWeight="400">{data.company.name}</Typography>
         <Box display="flex" gap="5px 40px" flexWrap="wrap">
-          <Typography variant="body2">i {data.company.type}</Typography>
-          <Typography variant="body2">i {data.company.language}</Typography>
-          <Typography variant="body2">i {data.company.experience}</Typography>
+          <CompanyTag variant="body2"><MapPin /> {data.company.type}</CompanyTag>
+          <CompanyTag variant="body2"><GlobeSimple /> {data.company.language}</CompanyTag>
+          <CompanyTag variant="body2"><Clock /> {data.company.experience}</CompanyTag>
         </Box>
       </Box>
     </Box>
   </Item>
 );
 
-const MarginBox = styled(Box)(({theme}) => ({
-  marginBottom: "60px",
-  [theme.breakpoints.up('md')]: {
-    marginBottom: "80px",
-  }
-}));
-
 const Job = () => {
   const [showType, setShowType] = useState('new');
   return (
     <Container>
       <MarginBox>
-        <Typography variant="h2">Vacancies</Typography>
-        <Box display="flex" alignItems="center" justifyContent="space-between" sx={{marginTop: '40px'}}>
-          <Box display="flex" gap="20px" >
+        <HeadContainer>
+          <Typography variant="h2" gridArea="title">Vacancies</Typography>
+          <Box display="flex" gap="20px" gridArea="buttons">
             <Button onClick={() => setShowType('filter')} color={showType !== 'filter' ? 'transparent' : ''}>Filter</Button>
             <Button onClick={() => setShowType('new')} color={showType !== 'new' ? 'transparent' : ''}>Newest</Button>
           </Box>
-          <span>input</span>
-        </Box>
+          <SearchInput />
+        </HeadContainer>
       </MarginBox>
 
       <Box sx={{display: 'flex'}}>
         <Collapse in={showType === 'filter'} timeout={1000}>
           <MarginBox>
-            <Typography variant="h2">Employment</Typography>
+            <Typography variant="h2" marginBottom="24px">Employment</Typography>
             <Box display="flex" alignItems="center" gap="12px 20px" flexWrap='wrap'>
               <Button color="transparent">Full time</Button>
               <Button color="transparent">Part-time</Button>
@@ -148,7 +118,7 @@ const Job = () => {
           </MarginBox>
 
           <MarginBox>
-            <Typography variant="h2">Direction</Typography>
+            <Typography variant="h2" marginBottom="24px">Direction</Typography>
             <Box display="flex" alignItems="center" gap="12px 20px" flexWrap='wrap'>
               <Button color="transparent">.NET</Button>
               <Button color="transparent">Android</Button>
@@ -163,11 +133,13 @@ const Job = () => {
               <Button color="transparent">...</Button>
             </Box>
           </MarginBox>
+
+          <MarginBox><Button size="large">Search</Button></MarginBox>
         </Collapse>
       </Box>
 
       <MarginBox>
-        <Stack spacing="24px">
+        <Stack sx={{rowGap: {xs: '24px', md: '52px'}}}>
           {dataArray.map(item => <Vacancy key={item.id} data={item}/>)}
         </Stack>
       </MarginBox>

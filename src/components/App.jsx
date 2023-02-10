@@ -6,7 +6,7 @@ import { Footer } from './Footer/Footer';
 const BlogPage = lazy(() => import('../pages/Blog/Blog'));
 const DevelopmentPage = lazy(() => import('../pages/Development/Development'));
 const HomePage = lazy(() => import('../pages/Home'));
-const JobPage = lazy(() => import('../pages/Job'));
+const JobPage = lazy(() => import('pages/Job/Job'));
 const MentorshipPage = lazy(() => import('../pages/Mentorship'));
 const ProfilePage = lazy(() => import('../pages/Profile'));
 const RoadmapsPage = lazy(() => import('../pages/Roadmaps/Roadmaps'));
