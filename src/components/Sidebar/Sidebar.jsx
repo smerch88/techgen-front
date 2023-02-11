@@ -24,7 +24,7 @@ const Sidebar = () => {
         </Item>
         <Item>
           <Helpful width="20px" height="20px" />
-          <Link to="/useful">Helpful</Link>
+          <Link to="/helpful">Helpful</Link>
         </Item>
         <Item>
           <Vacancies width="20px" height="20px" />
@@ -36,7 +36,7 @@ const Sidebar = () => {
         </Item>
         <Item>
           <AboutUs width="20px" height="20px" />
-          <Link>About us</Link>
+          <Link to="/about-us">About us</Link>
         </Item>
       </ul>
     </aside>
