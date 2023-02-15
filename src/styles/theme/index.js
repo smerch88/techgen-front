@@ -1,9 +1,11 @@
 import { createTheme } from '@mui/material';
+import MontserratRegularTtf from './fonts/Montserrat/Montserrat-Regular.ttf';
 import MontserratBoldTtf from './fonts/Montserrat/Montserrat-Bold.ttf';
 import GilroyRegularTtf from './fonts/Gilroy/Gilroy-Regular.ttf';
 import GilroyMediumTtf from './fonts/Gilroy/Gilroy-Medium.ttf';
 import GilroySemiBoldTtf from './fonts/Gilroy/Gilroy-SemiBold.ttf';
 import GilroyBoldTtf from './fonts/Gilroy/Gilroy-Bold.ttf';
+import InterBlackTtf from './fonts/Inter/Inter-Black.ttf';
 
 const theme = createTheme({
   breakpoints: {
@@ -58,8 +60,17 @@ theme.components = {
     styleOverrides: `
         @font-face {
           font-family: 'Montserrat';
-          src: url(${MontserratBoldTtf}) format('truetype');
+          src: url(${MontserratRegularTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 400;
         }
+        @font-face {
+          font-family: 'Montserrat';
+          src: url(${MontserratBoldTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 700;
+        }
+
         @font-face {
           font-family: 'Gilroy';
           src: url(${GilroyRegularTtf}) format('truetype');
@@ -84,6 +95,13 @@ theme.components = {
           font-style: normal;
           font-weight: 700;
         }
+
+        @font-face {
+          font-family: 'Inter';
+          src: url(${InterBlackTtf}) format('truetype');
+          font-style: normal;
+          font-weight: 900;
+        }
       `,
   },
   MuiContainer: {
@@ -100,16 +118,6 @@ theme.components = {
           padding: '0 32px',
         },
       },
-    },
-  },
-  MuiGrid: {
-    defaultProps: {
-      spacing: '24px',
-    },
-  },
-  MuiGrid2: {
-    defaultProps: {
-      spacing: '24px',
     },
   },
   MuiButton: {
@@ -195,9 +203,12 @@ theme.typography.body1 = {
   [theme.breakpoints.up('md')]: {
     fontSize: '16px',
   },
+  [theme.breakpoints.up('xl')]: {
+    fontSize: '20px',
+  },
 };
 theme.typography.body2 = {
-  opacity: 0.6
+  opacity: 0.6,
 };
 theme.typography.h1 = {
   fontSize: '20px',
@@ -208,6 +219,9 @@ theme.typography.h1 = {
   [theme.breakpoints.up('lg')]: {
     fontSize: '48px',
   },
+  [theme.breakpoints.up('xl')]: {
+    fontSize: '54px',
+  },
 };
 theme.typography.h2 = {
   fontSize: '18px',
@@ -215,12 +229,18 @@ theme.typography.h2 = {
   [theme.breakpoints.up('md')]: {
     fontSize: '28px',
   },
+  [theme.breakpoints.up('xl')]: {
+    fontSize: '32px',
+  },
 };
 theme.typography.h3 = {
   fontSize: '16px',
   fontWeight: 600,
   [theme.breakpoints.up('md')]: {
     fontSize: '24px',
+  },
+  [theme.breakpoints.up('xl')]: {
+    fontSize: '28px',
   },
 };
 theme.typography.button = {

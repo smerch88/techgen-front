@@ -1,16 +1,39 @@
-import { Button } from '@mui/material';
+import React, { useEffect } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Controller, useForm } from 'react-hook-form';
 import { validEmail } from 'shared/regex';
-import AuthField from '../AuthField/AuthField';
+import jwt_decode from 'jwt-decode';
+import AuthButton from '../AuthButton.styled';
+import AuthField from '../AuthField.styled';
+import auth from 'gateway/auth';
+import { useDispatch } from 'react-redux';
+import { signIn } from 'redux/auth/sliceAuth';
 
 const SignInForm = () => {
-  const { control, handleSubmit } = useForm({
+  const dispatch = useDispatch();
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState,
+    formState: { isSubmitSuccessful },
+  } = useForm({
     mode: 'onChange',
   });
 
-  const onSubmit = data => {
-    //login login
+  const onSubmit = async ({ email, password }) => {
+    const {
+      user: { accessToken },
+    } = await signInWithEmailAndPassword(auth, email, password);
+    dispatch(signIn(jwt_decode(accessToken)));
   };
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ email: '', password: '' });
+    }
+  }, [formState, isSubmitSuccessful, reset]);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Controller
@@ -28,7 +51,8 @@ const SignInForm = () => {
               placeholder="email"
               value={value || ''}
               onChange={onChange}
-              error={errors.email}
+              required
+              helperText={errors.email?.message}
             />
           );
         }}
@@ -48,15 +72,14 @@ const SignInForm = () => {
               placeholder="password"
               type="password"
               value={value || ''}
+              required
               onChange={onChange}
-              error={errors.password}
+              helperText={errors.password?.message}
             />
           );
         }}
       />
-      <Button type="submit" sx={{ margin: '40px 0' }}>
-        Sign in
-      </Button>
+      <AuthButton type="submit">Sing in</AuthButton>
     </form>
   );
 };

@@ -1,20 +1,15 @@
-import { Card, CardMedia } from '@mui/material';
-import { styles } from './styles';
 import closeBtn from '../../images/CloseBtn.png';
+import CloseButton from './CloseButton.styled';
+import PopupCard from './PopupCard.styled';
 
 const Popup = ({ children, showCloseBtn = true }) => {
   return (
-    <Card sx={styles.popup}>
+    <PopupCard>
       {showCloseBtn && (
-        <CardMedia
-          component="svg"
-          alt="close"
-          sx={styles.closeBtn}
-          image={closeBtn}
-        />
+        <CloseButton component="svg" alt="close" image={closeBtn} />
       )}
       {children}
-    </Card>
+    </PopupCard>
   );
 };
 
