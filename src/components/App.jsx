@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { Footer } from './Footer/Footer';
+import { Header } from './Header/Header';
 
 const BlogPage = lazy(() => import('../pages/Blog/Blog'));
 const DevelopmentPage = lazy(() => import('../pages/Development/Development'));
@@ -18,6 +19,7 @@ const AboutUsPage = lazy(() => import('pages/AboutUs/AboutUs'));
 export const App = () => {
   return (
     <Suspense fallback={<></>}>
+    <Header/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
