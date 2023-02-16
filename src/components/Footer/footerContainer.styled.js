@@ -8,13 +8,17 @@ export const FooterContainer = styled((props) => (
             {props.children}
         </Box>
     </Paper>
-))`
-  height: 8vh;
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  background-color: ${theme.palette.primary.main};
-  `;
+))(({
+    height: "8vh",
+    marginTop: "auto",
+    width: "100%",
+    backgroundColor: [theme.palette.primary.main]
+}))
+
+
+
+
+
 
 
 
