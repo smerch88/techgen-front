@@ -4,11 +4,11 @@ import { nanoid } from "@reduxjs/toolkit";
 import RoadmapsCard from "./RoadmapsCard";
 import RoadmapsSkeleton from "./RoadmapsSkeleton";
 
+import roadmapsSelector from "redux/roadmaps/roadmapsSelector";
 import { useSelector } from "react-redux";
 
 const RoadmapsCards = () => {
-    const roadmaps = useSelector(state => state.roadmaps.roadmaps);
-    const roadmapsLoadingStatus = useSelector(state => state.roadmaps.roadmapsLoadingStatus);
+    const {roadmaps, roadmapsLoadingStatus} = useSelector(roadmapsSelector);
 
     const renderItems = () => {
         if (roadmapsLoadingStatus === 'error') {
@@ -25,7 +25,7 @@ const RoadmapsCards = () => {
     }
     
     return (
-        <Box m="80px 0">
+        <Box m="60px 0">
             <Grid container spacing={{xs: 2, md: 5, lg: 4, xl: 4}}>
                 {renderItems()}
             </Grid>
