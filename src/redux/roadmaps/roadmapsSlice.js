@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { roadMapsInstance } from 'api';
 
 const initialState = {
+  filter: "skill",
   roadmaps: [],
   roadmapsLoadingStatus: 'idle',
 };
@@ -22,14 +23,18 @@ export const fetchRoadmaps = createAsyncThunk(
 const roadmapsSlice = createSlice({
   name: 'roadmaps',
   initialState,
-  reducers: {},
+  reducers: {
+    changeFilter: (state, action) => {
+      state.filter = action.payload;
+    }
+  },
   extraReducers: builder => {
     builder
       .addCase(fetchRoadmaps.pending, state => {
         state.roadmapsLoadingStatus = 'loading';
       })
       .addCase(fetchRoadmaps.fulfilled, (state, action) => {
-        state.roadmaps = action.payload ? action.payload : [];
+        state.roadmaps = action.payload;
         state.roadmapsLoadingStatus = 'idle';
       })
       .addCase(fetchRoadmaps.rejected, state => {
@@ -38,4 +43,5 @@ const roadmapsSlice = createSlice({
   },
 });
 
+export const {changeFilter} = roadmapsSlice.actions;
 export default roadmapsSlice.reducer;
