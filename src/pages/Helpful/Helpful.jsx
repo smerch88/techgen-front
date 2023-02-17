@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import Sidebar from 'components/Sidebar/Sidebar';
 import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
