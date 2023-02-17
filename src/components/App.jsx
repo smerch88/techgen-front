@@ -6,7 +6,6 @@ import { Header } from './Header/Header';
 
 const BlogPage = lazy(() => import('../pages/Blog/Blog'));
 const DevelopmentPage = lazy(() => import('../pages/Development/Development'));
-const HomePage = lazy(() => import('../pages/Home'));
 const JobPage = lazy(() => import('pages/Job/Job'));
 const MentorshipPage = lazy(() => import('../pages/Mentorship'));
 const ProfilePage = lazy(() => import('../pages/Profile'));
@@ -19,10 +18,10 @@ const AboutUsPage = lazy(() => import('pages/AboutUs/AboutUs'));
 export const App = () => {
   return (
     <Suspense fallback={<></>}>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<AboutUsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
@@ -32,8 +31,7 @@ export const App = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/roadmaps" element={<RoadmapsPage />} />
           <Route path="/helpful" element={<HelpfulPage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="*" element={<HomePage />} />
+          <Route path="*" element={<AboutUsPage />} />
         </Route>
       </Routes>
       <Footer />
