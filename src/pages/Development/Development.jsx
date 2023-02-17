@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
+import Rectangle from 'images/Rectangle.jpg';
 import { Container, Typography } from '@mui/material';
 import getDevelopments from './api';
 import {
@@ -30,10 +31,7 @@ const Development = () => {
         <List>
           {developments.map(({ id, title, text, pictures }) => (
             <Item key={id}>
-              <Image
-                src="../../images/icons/Rectangle.jpg"
-                alt="development image"
-              />
+              <Image src={Rectangle} alt="development image" />
               <BoxWrapper>
                 <Typography variant="h3">{title}</Typography>
                 <Typography variant="body2">{text}</Typography>
