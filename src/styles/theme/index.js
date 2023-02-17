@@ -58,6 +58,11 @@ theme.components = {
   //connecting fonts
   MuiCssBaseline: {
     styleOverrides: `
+        #root {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
         @font-face {
           font-family: 'Montserrat';
           src: url(${MontserratRegularTtf}) format('truetype');
@@ -103,6 +108,8 @@ theme.components = {
           font-weight: 900;
         }
       `,
+     
+    
   },
   MuiContainer: {
     defaultProps: {
