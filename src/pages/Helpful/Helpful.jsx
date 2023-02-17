@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from 'components/Sidebar/Sidebar';
 import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
+import Rectangle from 'images/Rectangle.jpg';
 import { Container, Typography } from '@mui/material';
 import getHelpfuls from '../../services/helpful-api';
 import { Image, Item, Wrapper, BoxWrapper, List, Div } from './helpful.styled';
@@ -23,10 +24,7 @@ const Helpful = () => {
         <List>
           {articles.map(({ id, title, text, pictures }) => (
             <Item key={id}>
-              <Image
-                src="../../images/icons/Rectangle.jpg"
-                alt="helpful image"
-              />
+              <Image src={Rectangle} alt="helpful image" />
               <BoxWrapper>
                 <Typography variant="h3">{title}</Typography>
                 <Typography variant="body2">{text}</Typography>
