@@ -9,6 +9,9 @@ export const Item = styled('li')(({ theme }) => ({
   marginBottom: '52px',
   background: theme.palette.colorList.boulder,
   cursor: 'pointer',
+  '&:hover': {
+    transform: 'scale(1.05)',
+  },
   [theme.breakpoints.up('xs')]: {
     flexDirection: 'column',
   },
