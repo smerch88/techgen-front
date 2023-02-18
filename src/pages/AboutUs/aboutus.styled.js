@@ -1,7 +1,7 @@
 import { Box, Grid, keyframes, styled, SvgIcon, Typography } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import earthImage from 'images/earth.png';
 
 const showBanner_xs = keyframes`
@@ -189,9 +189,9 @@ export const SectionItem = (props) => (
     <Typography variant="h3" gridArea="title">{props.title}</Typography>
     <Typography gridArea="desc" lineHeight="130%">{props.description}</Typography>
     <Typography variant="body2" textAlign="right" gridArea="link">
-      <Link to={props.link} style={{color: 'inherit', textDecoration: 'unset'}} >
+      <NavLink to={props.link} style={{color: 'inherit', textDecoration: 'unset'}} >
         go to section
-      </Link>
+      </NavLink>
     </Typography>
   </Box>
 );
