@@ -72,13 +72,13 @@ const AboutUs = () => {
       })} >
         <Container>
           <Typography variant="h2">Sections</Typography>
-          <CardsBox container>
+          <CardsBox container spacing="24px">
             <Grid item xs={12} lg={6}>
               <SectionItem
                 icon={<PencilIcon/>}
                 title='IT news and articles'
                 description='Current news in the IT sphere, the most interesting and useful articles about programming languages, frameworks, technologies - all this and much more in the "Blog" section.'
-                link="#"
+                link="/blog"
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -86,7 +86,7 @@ const AboutUs = () => {
                 icon={<MapIcon/>}
                 title='How to learn to code?'
                 description='"Roadmaps" - actual educational schemes that will help in mastering the chosen profession and learning the necessary skills/tools.'
-                link="#"
+                link="/roadmaps"
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -94,7 +94,7 @@ const AboutUs = () => {
                 icon={<ToolsIcon/>}
                 title='Top services for specialist'
                 description='The "Helpful" section is a real treasure for every specialist because there are collected services and sites that will help in education and work.'
-                link="#"
+                link="/helpful"
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -102,7 +102,7 @@ const AboutUs = () => {
                 icon={<MenIcon/>}
                 title='Our educational programs'
                 description='Are you just starting your journey in IT or are you looking for opportunities to get practice on real projects after the courses? Go to "Mentorship".'
-                link="#"
+                link="/mentorship"
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -110,7 +110,7 @@ const AboutUs = () => {
                 icon={<SearchIcon/>}
                 title='Search for an IT job'
                 description='In the "Vacancies" section, you will be able to find not only a convenient search for available vacancies but also several features that will help you get a job.'
-                link="#"
+                link="/job"
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -118,7 +118,7 @@ const AboutUs = () => {
                 icon={<DevIcon/>}
                 title='Products and services'
                 description='You can familiarize yourself with the products created by our team or order development services on the "Development" page'
-                link="#"
+                link="/development"
               />
             </Grid>
           </CardsBox>
