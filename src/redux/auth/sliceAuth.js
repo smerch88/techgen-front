@@ -1,12 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { signInAction, signOutAction } from './operationsAuth';
+
+const initialState = {
+  user: null,
+  isAuthorized: false
+}
 
 export const authSlice = createSlice({
   name: 'auth',
-  initialState: { currentUser: null },
+  initialState,
   reducers: {
-    signIn: signInAction,
-    signOut: signOutAction,
+    signIn: (state, action) => {
+      state.user = action.payload;
+      state.isAuthorized = true;
+    },
+    signOut: () => initialState,
   },
 });
 
