@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Controller, useForm } from 'react-hook-form';
 import { validEmail } from 'shared/regex';
-import jwt_decode from 'jwt-decode';
 import AuthButton from '../AuthButton.styled';
 import AuthField from '../AuthField.styled';
-import auth from 'gateway/auth';
 import { useDispatch } from 'react-redux';
 import { signIn } from 'redux/auth/sliceAuth';
+import api from 'api/api';
+import { setTokens } from 'helpers/save_tokens';
 
 const SignInForm = () => {
   const dispatch = useDispatch();
@@ -22,10 +21,13 @@ const SignInForm = () => {
   });
 
   const onSubmit = async ({ email, password }) => {
-    const {
-      user: { accessToken },
-    } = await signInWithEmailAndPassword(auth, email, password);
-    dispatch(signIn(jwt_decode(accessToken)));
+    try {
+      const resp = await api.admin_session.login({email, password});
+      setTokens(resp.data.token);
+      dispatch(signIn(resp.data.user));
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
