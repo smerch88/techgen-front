@@ -9,6 +9,7 @@ import { USER_ROLES } from 'helpers/roles';
 import { PrivateRoute } from 'components/PrivateRoute';
 
 const BlogPage = lazy(() => import('../pages/Blog/Blog'));
+const PostPage = lazy(() => import('../pages/Blog/Post/Post'));
 const DevelopmentPage = lazy(() => import('../pages/Development/Development'));
 const JobPage = lazy(() => import('pages/Job/Job'));
 const MentorshipPage = lazy(() => import('../pages/Mentorship'));
@@ -33,6 +34,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<AboutUs />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/posts/:id" element={<PostPage />} />
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
           <Route
