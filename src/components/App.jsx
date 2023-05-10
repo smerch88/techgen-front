@@ -17,6 +17,7 @@ const RoadmapsPage = lazy(() => import('../pages/Roadmaps/Roadmaps'));
 const HelpfulPage = lazy(() => import('../pages/Helpful/Helpful'));
 const SignInPage = lazy(() => import('../pages/SignIn'));
 const SignUpPage = lazy(() => import('../pages/SignUp'));
+const Page404 = lazy(() => import('../pages/Page404/Page404'));
 
 export const App = () => {
   history.navigate = useNavigate();
@@ -54,7 +55,7 @@ export const App = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/roadmaps" element={<RoadmapsPage />} />
           <Route path="/helpful" element={<HelpfulPage />} />
-          <Route path="*" element={<AboutUs />} />
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </Suspense>
