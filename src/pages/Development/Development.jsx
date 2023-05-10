@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../../components/Sidebar/Sidebar';
 import { ReactComponent as ArrowUp } from 'images/icons/arrowUp.svg';
 import Rectangle from 'images/Rectangle.jpg';
 import { Container, Typography } from '@mui/material';
@@ -24,7 +23,6 @@ const Development = () => {
   }, []);
   return (
     <Wrapper>
-      <Sidebar />
       <Container>
         <Typography variant="h2">Development</Typography>
 

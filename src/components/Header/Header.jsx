@@ -13,6 +13,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { MuiDrawer } from './../Drawer/Drawer';
 export const Header = () => {
   const theme = useTheme();
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ export const Header = () => {
             //login
             <StyledIconButton src={SignupIcon} handler={redirectToSignIn} />
           )}
+          <MuiDrawer />
         </Box>
       </StyledAppBar>
     </>
