@@ -5,11 +5,11 @@ import { ReactComponent as Helpful } from '../../images/icons/Helpful.svg';
 import { ReactComponent as Vacancies } from '../../images/icons/Vacancies.svg';
 import { ReactComponent as Development } from '../../images/icons/Development.svg';
 import { ReactComponent as AboutUs } from '../../images/icons/Profiles.svg';
-import { Item, Link } from './sidebar.styled';
+import { Item, Link, List } from './sidebar.styled';
 const Sidebar = () => {
   return (
     <aside>
-      <ul>
+      <List>
         <Item>
           <Blog width="20px" height="20px" />
           <Link to="/blog">Blog</Link>
@@ -38,7 +38,7 @@ const Sidebar = () => {
           <AboutUs width="20px" height="20px" />
           <Link to="/about-us">About us</Link>
         </Item>
-      </ul>
+      </List>
     </aside>
   );
 };
