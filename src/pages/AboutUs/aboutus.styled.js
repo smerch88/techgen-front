@@ -160,40 +160,47 @@ AboutItem.propTypes = {
 };
 
 export const SectionItem = (props) => (
-  <Box sx={theme => ({
-    width: '100%',
-    height: '100%',
-    background: 'linear-gradient(180deg, rgba(49, 38, 70, 0.4) 0%, rgba(24, 12, 51, 0.4) 100%)',
-    borderRadius: '16px',
-    display: 'grid',
-    gridTemplateAreas: "'icon title' 'desc desc' '. link' ",
-    gridTemplateColumns: '60px 1fr',
-    alignItems: 'center',
-    gap: '12px',
-    padding: '24px 12px 14px',
-    [theme.breakpoints.only('md')]: {
-      gridTemplateAreas: "'icon title' 'icon desc' '. link' ",
-      columnGap: '28px'
-    },
-    [theme.breakpoints.up('md')]: {
-      rowGap: '24px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      gridTemplateAreas: "'icon' 'title' 'desc' 'link' ",
-      gridTemplateColumns: 'unset',
-      gridTemplateRows: '60px min-content 1fr min-content',
-      alignItems: 'start',
-    }
-  })}>
-    <SvgIcon viewBox="0 0 60 60" sx={{width: '60px', height: '60px', gridArea: 'icon'}}>{props.icon}</SvgIcon>
-    <Typography variant="h3" gridArea="title">{props.title}</Typography>
-    <Typography gridArea="desc" lineHeight="130%">{props.description}</Typography>
-    <Typography variant="body2" textAlign="right" gridArea="link">
-      <NavLink to={props.link} style={{color: 'inherit', textDecoration: 'unset'}} >
-        go to section
-      </NavLink>
-    </Typography>
-  </Box>
+  <NavLink to={props.link} style={{color: 'inherit', textDecoration: 'unset'}} >
+    <Box sx={theme => ({
+      width: '100%',
+      height: '100%',
+      background: 'linear-gradient(180deg, rgba(49, 38, 70, 0.4) 0%, rgba(24, 12, 51, 0.4) 100%)',
+      borderRadius: '16px',
+      display: 'grid',
+      gridTemplateAreas: "'icon title' 'desc desc' '. link' ",
+      gridTemplateColumns: '60px 1fr',
+      alignItems: 'center',
+      gap: '12px',
+      padding: '24px 12px 14px',
+      transition: "box-shadow 0.3s ease-in-out",
+      '&:hover': {
+        boxShadow: "10px 10px 32px -14px rgba(208,177,232,0.56);",
+        '& .underline': {
+            textDecoration: 'underline',
+        },
+      },
+      [theme.breakpoints.only('md')]: {
+        gridTemplateAreas: "'icon title' 'icon desc' '. link' ",
+        columnGap: '28px'
+      },
+      [theme.breakpoints.up('md')]: {
+        rowGap: '24px',
+      },
+      [theme.breakpoints.up('lg')]: {
+        gridTemplateAreas: "'icon' 'title' 'desc' 'link' ",
+        gridTemplateColumns: 'unset',
+        gridTemplateRows: '60px min-content 1fr min-content',
+        alignItems: 'start',
+      }
+    })}>
+      <SvgIcon viewBox="0 0 60 60" sx={{width: '60px', height: '60px', gridArea: 'icon'}}>{props.icon}</SvgIcon>
+      <Typography variant="h3" gridArea="title">{props.title}</Typography>
+      <Typography gridArea="desc" lineHeight="130%">{props.description}</Typography>
+      <Typography className='underline' variant="body2" textAlign="right" gridArea="link">
+          go to section
+      </Typography>
+    </Box>
+  </NavLink>
 );
 SectionItem.propTypes = {
   icon: PropTypes.node.isRequired,
