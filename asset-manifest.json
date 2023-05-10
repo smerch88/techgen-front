@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/techgen-front/static/js/main.71f3f6dd.js",
+    "main.js": "/techgen-front/static/js/main.cad8b854.js",
     "static/js/452.8f129848.chunk.js": "/techgen-front/static/js/452.8f129848.chunk.js",
     "static/js/57.67d8f2ed.chunk.js": "/techgen-front/static/js/57.67d8f2ed.chunk.js",
     "static/js/105.a84facd9.chunk.js": "/techgen-front/static/js/105.a84facd9.chunk.js",
@@ -10,6 +10,7 @@
     "static/js/741.67bf4e58.chunk.js": "/techgen-front/static/js/741.67bf4e58.chunk.js",
     "static/js/621.1b454d45.chunk.js": "/techgen-front/static/js/621.1b454d45.chunk.js",
     "static/js/686.92f06e11.chunk.js": "/techgen-front/static/js/686.92f06e11.chunk.js",
+    "static/js/339.a65c66dd.chunk.js": "/techgen-front/static/js/339.a65c66dd.chunk.js",
     "static/js/884.59a184a7.chunk.js": "/techgen-front/static/js/884.59a184a7.chunk.js",
     "static/js/112.18d1e4d3.chunk.js": "/techgen-front/static/js/112.18d1e4d3.chunk.js",
     "static/js/842.0fda215b.chunk.js": "/techgen-front/static/js/842.0fda215b.chunk.js",
@@ -54,7 +55,7 @@
     "static/media/Sign up.svg": "/techgen-front/static/media/Sign up.d0628b8270956d833f047f6394be87d2.svg",
     "static/media/Burger.svg": "/techgen-front/static/media/Burger.0b38c8acdb1580f4d76a43cfd221aead.svg",
     "static/media/CheckBoxIcon.svg": "/techgen-front/static/media/CheckBoxIcon.2d03e756353d2b38fdd410b2ed455b85.svg",
-    "main.71f3f6dd.js.map": "/techgen-front/static/js/main.71f3f6dd.js.map",
+    "main.cad8b854.js.map": "/techgen-front/static/js/main.cad8b854.js.map",
     "452.8f129848.chunk.js.map": "/techgen-front/static/js/452.8f129848.chunk.js.map",
     "57.67d8f2ed.chunk.js.map": "/techgen-front/static/js/57.67d8f2ed.chunk.js.map",
     "105.a84facd9.chunk.js.map": "/techgen-front/static/js/105.a84facd9.chunk.js.map",
@@ -64,6 +65,7 @@
     "741.67bf4e58.chunk.js.map": "/techgen-front/static/js/741.67bf4e58.chunk.js.map",
     "621.1b454d45.chunk.js.map": "/techgen-front/static/js/621.1b454d45.chunk.js.map",
     "686.92f06e11.chunk.js.map": "/techgen-front/static/js/686.92f06e11.chunk.js.map",
+    "339.a65c66dd.chunk.js.map": "/techgen-front/static/js/339.a65c66dd.chunk.js.map",
     "884.59a184a7.chunk.js.map": "/techgen-front/static/js/884.59a184a7.chunk.js.map",
     "112.18d1e4d3.chunk.js.map": "/techgen-front/static/js/112.18d1e4d3.chunk.js.map",
     "842.0fda215b.chunk.js.map": "/techgen-front/static/js/842.0fda215b.chunk.js.map",
@@ -71,6 +73,6 @@
     "830.cf682f66.chunk.js.map": "/techgen-front/static/js/830.cf682f66.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.71f3f6dd.js"
+    "static/js/main.cad8b854.js"
   ]
 }
