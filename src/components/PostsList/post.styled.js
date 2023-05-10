@@ -1,4 +1,4 @@
-import { Box, styled } from '@mui/material';
+import { Box, Skeleton, Typography, styled } from '@mui/material';
 
 export const StyledPost = styled(Box)(({ theme }) => ({
   cursor: 'pointer',
@@ -19,4 +19,19 @@ export const StyledPost = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     flexDirection: 'row',
   },
+}));
+
+export const PostSkeleton = styled(Skeleton)({
+  height: '200px',
+  margin: ' 0 0 5px 0',
+  borderRadius: '16px',
+});
+
+export const Title = styled(({ name, ...props }) => (
+  <Typography variant="h2" {...props}>
+    {name}
+  </Typography>
+))(() => ({
+  marginBottom: '12px !important',
+  lineHeight: '24px',
 }));
