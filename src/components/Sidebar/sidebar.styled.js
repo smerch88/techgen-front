@@ -1,6 +1,9 @@
 import { styled } from '@mui/material/styles';
 import theme from 'styles/theme';
 import { NavLink } from 'react-router-dom';
+export const List = styled('ul')({
+  marginTop: '83px',
+});
 export const Item = styled('li')({
   display: 'flex',
   marginBottom: '23px',

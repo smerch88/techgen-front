@@ -1,8 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Layout } from './Layout';
-import { Footer } from './Footer/Footer';
-import { Header } from './Header/Header';
+import { Layout } from './Layout/Layout';
 import AboutUs from 'pages/AboutUs/AboutUs';
 import { history } from 'helpers/history';
 import { checkSession } from 'helpers/session';
@@ -30,23 +28,35 @@ export const App = () => {
 
   return (
     <Suspense fallback={<></>}>
-      <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<AboutUs />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/development" element={<RestrictedRoute redirectTo={'/job'} roles={[USER_ROLES.user, USER_ROLES.admin]} component={<DevelopmentPage />}/>} />
+          <Route
+            path="/development"
+            element={
+              <RestrictedRoute
+                redirectTo={'/job'}
+                roles={[USER_ROLES.user, USER_ROLES.admin]}
+                component={<DevelopmentPage />}
+              />
+            }
+          />
           <Route path="/job" element={<JobPage />} />
-          <Route path="/mentorship" element={<PrivateRoute redirectTo={'/'} component={<MentorshipPage />}/>} />
+          <Route
+            path="/mentorship"
+            element={
+              <PrivateRoute redirectTo={'/'} component={<MentorshipPage />} />
+            }
+          />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/roadmaps" element={<RoadmapsPage />} />
           <Route path="/helpful" element={<HelpfulPage />} />
           <Route path="*" element={<AboutUs />} />
         </Route>
       </Routes>
-      <Footer />
     </Suspense>
   );
 };
