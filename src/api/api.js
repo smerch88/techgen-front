@@ -29,7 +29,7 @@ class Api {
         (response) => response.data,
         async function (error) {
           // If the error is not related to authorization -> return error
-          if (error.response.status !== 401) return Promise.reject(error.response);
+          if (error?.response?.status !== 401) return Promise.reject(error.response);
 
           // 401 Unauthorized status code
           // If refreshToken is empty -> logout
@@ -116,7 +116,7 @@ class Api {
 
   admin_post = {
     createPost: (data) => this.authorized_client.post(this.env.adminPostAppName, data),
-    updatePost: (id, data) => this.authorized_client.post(this.env.adminPostAppName + `/${id}`, data),
+    updatePost: (id, data) => this.authorized_client.post(this.env.adminPostAppName + `/edit/${id}`, data),
     deletePost: (id) => this.authorized_client.delete(this.env.adminPostAppName + `/${id}`)
   };
 
