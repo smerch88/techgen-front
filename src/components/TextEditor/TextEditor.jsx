@@ -31,7 +31,7 @@ const TextEditor = React.forwardRef(  ({defaultValue, readOnly = false}, ref) =>
           }
         },
         readOnly,
-        placeholder: 'Enter text...'
+        placeholder: !defaultValue ? 'Enter text...' : ''
       });
 
       if (defaultValue) {

@@ -21,6 +21,7 @@ export const MuiDrawer = () => {
         anchor="left"
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
+        PaperProps={{ sx: (theme) => ({background: theme.palette.primary.main}) }}
       >
         <Box>
           <Sidebar />
