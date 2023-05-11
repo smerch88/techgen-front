@@ -2,12 +2,15 @@ import {
   Box,
   Button,
   Dialog,
-  DialogActions, DialogContent,
+  DialogActions,
+  DialogContent,
   DialogTitle,
   IconButton,
   Menu,
   MenuItem,
-  styled, TextareaAutosize, Typography,
+  styled,
+  TextareaAutosize,
+  Typography,
 } from '@mui/material';
 import { CaretLeft, DotsThreeOutlineVertical, Trash } from 'phosphor-react';
 import { Link } from 'react-router-dom';
@@ -15,17 +18,24 @@ import React from 'react';
 
 export const PostHeader = ({ children, ...props }) => (
   <Box
-    sx={{display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between'}}
+    sx={{
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-between',
+    }}
     {...props}
   >
-    <Link to={'/posts'} style={{
-      display: 'flex',
-      alignItems: 'center',
-      fontSize: '30px',
-      color: '#fff',
-      opacity: '0.5',
-      textDecoration: 'none'
-    }}>
+    <Link
+      to={'/blog'}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: '30px',
+        color: '#fff',
+        opacity: '0.5',
+        textDecoration: 'none',
+      }}
+    >
       <CaretLeft weight="bold" /> Back
     </Link>
 
@@ -33,10 +43,10 @@ export const PostHeader = ({ children, ...props }) => (
   </Box>
 );
 
-export default function ActionsDropdown({children}) {
+export default function ActionsDropdown({ children }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -79,10 +89,10 @@ export default function ActionsDropdown({children}) {
 export const Action = styled(MenuItem)({
   display: 'flex',
   alignItems: 'center',
-  gap: "12px"
+  gap: '12px',
 });
 
-export function DeleteDialog({onConfirm}) {
+export function DeleteDialog({ onConfirm }) {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -105,18 +115,20 @@ export function DeleteDialog({onConfirm}) {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        PaperProps={{sx:{background: 'rgba(120, 120, 120, 0.6)', padding: '24px'}}}
+        PaperProps={{
+          sx: { background: 'rgba(120, 120, 120, 0.6)', padding: '24px' },
+        }}
       >
-        <DialogTitle id="alert-dialog-title">
-          Confirm the deletion
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">Confirm the deletion</DialogTitle>
         <DialogContent>
           <Typography id="alert-dialog-description">
             The post will be deleted
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button color="transparent" onClick={handleClose}>Cansle</Button>
+          <Button color="transparent" onClick={handleClose}>
+            Cansle
+          </Button>
           <Button color="gradient" onClick={handleConfirm} autoFocus>
             Agree
           </Button>
@@ -133,7 +145,7 @@ export const PostTitle = styled(TextareaAutosize)(({ theme }) => ({
   background: 'transparent',
   outline: 'none',
   resize: 'none',
-  padding: '12px 15px'
+  padding: '12px 15px',
 }));
 
 export const EditorContainerDiv = styled(Box)(({ theme }) => ({
@@ -142,6 +154,6 @@ export const EditorContainerDiv = styled(Box)(({ theme }) => ({
   '& .ql-editor h2': theme.typography.h2,
   '& .ql-editor h3': theme.typography.h3,
   '& .ql-editor::before': {
-    color: 'rgb(117, 117, 117)'
-  }
+    color: 'rgb(117, 117, 117)',
+  },
 }));

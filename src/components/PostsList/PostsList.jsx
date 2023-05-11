@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Post from './Post';
 import { Box } from '@mui/material';
 
-import { blogInstance } from 'api';
+import { usePosts } from './usePosts';
+import { PostSkeleton } from './post.styled';
 
 const PostsList = () => {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    (async () => {
-      const response = await blogInstance.get();
-      setPosts(response.data);
-    })();
-  }, []);
+  const { data, isLoading } = usePosts();
 
   return (
     <Box sx={{ marginBottom: '324px' }}>
-      {posts.map(post => (
-        <Post key={post.id} {...post} />
-      ))}
+      {isLoading
+        ? [...Array(4)].map((_, index) => (
+            <PostSkeleton animation="wave" key={index} />
+          ))
+        : data?.map(post => (
+            <Post key={post.id} name={post.name} id={post.id} />
+          ))}
     </Box>
   );
 };
