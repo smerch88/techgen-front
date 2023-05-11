@@ -11,8 +11,12 @@ const PostsList = () => {
   return (
     <Box sx={{ marginBottom: '324px' }}>
       {isLoading
-        ? [...Array(4)].map(() => <PostSkeleton />)
-        : data?.map(post => <Post key={post?.id} name={post?.name} />)}
+        ? [...Array(4)].map((_, index) => (
+            <PostSkeleton animation="wave" key={index} />
+          ))
+        : data?.map(post => (
+            <Post key={post.id} name={post.name} id={post.id} />
+          ))}
     </Box>
   );
 };

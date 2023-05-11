@@ -18,7 +18,7 @@ const StyledBlog = styled(props => (
   </Grid>
 ))(({ theme }) => ({
   display: 'flex',
-  margin: '0 auto',
+  margin: '30px auto 0px auto',
 
   [theme.breakpoints.up('xs')]: {
     padding: '0 16px',

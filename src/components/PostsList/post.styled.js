@@ -1,4 +1,4 @@
-import { Box, Skeleton, Typography, styled } from '@mui/material';
+import { Box, Link, Skeleton, Typography, styled } from '@mui/material';
 
 export const StyledPost = styled(Box)(({ theme }) => ({
   cursor: 'pointer',
@@ -25,6 +25,11 @@ export const PostSkeleton = styled(Skeleton)({
   height: '200px',
   margin: ' 0 0 5px 0',
   borderRadius: '16px',
+});
+
+export const StyledLink = styled(Link)({
+  textDecoration: 'none',
+  color: 'inherit',
 });
 
 export const Title = styled(({ name, ...props }) => (

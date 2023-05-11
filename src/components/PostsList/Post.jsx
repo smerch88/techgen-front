@@ -1,12 +1,14 @@
 import React from 'react';
 
-import { StyledPost, Title } from './post.styled';
+import { StyledLink, StyledPost, Title } from './post.styled';
 
-const Post = ({ name }) => {
+const Post = ({ name, id }) => {
   return (
-    <StyledPost>
-      <Title name={name} />
-    </StyledPost>
+    <StyledLink href={`posts/${id}`}>
+      <StyledPost>
+        <Title name={name} />
+      </StyledPost>
+    </StyledLink>
   );
 };
 
