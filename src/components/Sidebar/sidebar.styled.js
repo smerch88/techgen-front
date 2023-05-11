@@ -3,6 +3,7 @@ import theme from 'styles/theme';
 import { NavLink } from 'react-router-dom';
 export const List = styled('ul')({
   marginTop: '83px',
+  padding: '0 34px'
 });
 export const Item = styled('li')({
   display: 'flex',
