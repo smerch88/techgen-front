@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { signIn } from 'redux/auth/sliceAuth';
 import api from 'api/api';
 import { setTokens } from 'helpers/save_tokens';
+import { history } from 'helpers/history';
 
 const SignInForm = () => {
   const dispatch = useDispatch();
@@ -25,8 +26,10 @@ const SignInForm = () => {
       const resp = await api.admin_session.login({email, password});
       setTokens(resp.data.token);
       dispatch(signIn(resp.data.user));
+      history.navigate("/");
     } catch (error) {
-      console.error(error);
+      alert("Oops, something went wrong! \nAn error occurred during authorization. \nError: " + error.data.errors[0].message);
+      console.error('sign in error', error);
     }
   };
 
