@@ -33,9 +33,10 @@ const scrollArrows = keyframes`
   }
 `;
 
-export const ShowMoreArrows = () => (
-  <Box sx={{
+export const ShowMoreArrows = (props) => (
+  <Box {...props} sx={{
     position: 'relative',
+    cursor: 'pointer',
     width: '40px',
     height: '40px',
     margin: '0 auto',
@@ -65,7 +66,7 @@ export const MainBanner = (props) => (
   <Box
     sx={{
       position: 'relative',
-      minHeight: 'calc(100vh - 80px)',
+      minHeight: '100vh',
       width: '100%',
       display: 'flex',
       flexDirection: 'column',
@@ -123,7 +124,7 @@ export const MainBanner = (props) => (
         {props.children}
       </Box>
     </Box>
-    <ShowMoreArrows/>
+    <ShowMoreArrows onClick={props.onShowMore}/>
   </Box>
 );
 
@@ -160,7 +161,7 @@ AboutItem.propTypes = {
 };
 
 export const SectionItem = (props) => (
-  <NavLink to={props.link} style={{color: 'inherit', textDecoration: 'unset'}} >
+  <NavLink to={props.link} style={{color: 'inherit', textDecoration: 'unset', opacity: props.disabled && 0.4, pointerEvents: props.disabled && 'none'}} >
     <Box sx={theme => ({
       width: '100%',
       height: '100%',
