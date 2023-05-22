@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import {
   StyledAppBar,
@@ -10,18 +9,61 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import Sidebar from 'components/Sidebar/Sidebar';
-import BurgerIcon from '../../images/icons/Burger.svg';
 import SignupIcon from '../../images/icons/Sign up.svg';
-import ArrowDownIcon from '../../images/icons/Arrow_down.svg';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import { Box, Typography } from '@mui/material';
+import { Box, Divider, Menu, MenuItem, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-export const Header = () => {
-  const theme = useTheme();
+import { useAuth } from 'hooks';
+import { logout } from 'helpers/session';
+
+const UserActions = () => {
   const navigate = useNavigate();
-  const [activeLang, setActiveLang] = useState('EN');
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const {isAuthorized, user} = useAuth();
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleLogout = () => {
+    logout('/sign-in');
+    handleClose();
+  }
+
+  if(!isAuthorized) return (
+    <StyledIconButton onClick={() => navigate(`/sign-in`)}>
+      <Box component="img" src={SignupIcon} />
+    </StyledIconButton>
+  )
+
+  return(
+    <Box sx={{position: 'relative'}}>
+      <StyledIconButton onClick={handleClick} >
+        <Box>{user?.role[0] || "U"}</Box>
+      </StyledIconButton>
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        PaperProps={{
+          style: {
+            maxHeight: 'max-content',
+            width: 'max-content',
+          },
+        }}
+        anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+      >
+        <MenuItem disabled>Profile</MenuItem>
+        <Divider color="#fff" variant={'middle'}/>
+        <MenuItem sx={( theme ) => ({color: theme.palette.text.secondary})} onClick={handleLogout}>Logout</MenuItem>
+      </Menu>
+    </Box>
+  );
+}
+
+export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const toggleDrawer = open => event => {
     if (
@@ -32,32 +74,20 @@ export const Header = () => {
     }
     setIsDrawerOpen(open);
   };
-  const isMobileVersion = useMediaQuery(theme.breakpoints.between('xs', 'lg'));
-  function handleToggle() {
-    setNavbarOpen(!navbarOpen);
-  }
-
-  function redirectToSignIn() {
-    navigate(`/sign-in`);
-  }
 
   // const langs = ['EN', 'RU', 'UA']; // get from redux
   return (
     <>
-      <StyledAppBar maxWidth={false}>
+      <StyledAppBar>
         <Link to="/">
           <Typography variant="h2">Techgen</Typography>
         </Link>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           {/* language panel */}
-          <LanguageDropDown src={ArrowDownIcon} />
-          {isMobileVersion ? (
-            // burger
-            <StyledIconButton src={BurgerIcon} handler={handleToggle} />
-          ) : (
-            //login
-            <StyledIconButton src={SignupIcon} handler={redirectToSignIn} />
-          )}
+          <LanguageDropDown />
+          <Divider orientation="vertical" color="#fff" variant={'middle'} flexItem/>
+          {/*login*/}
+          <UserActions />
           <IconButton
             size="large"
             edge="start"

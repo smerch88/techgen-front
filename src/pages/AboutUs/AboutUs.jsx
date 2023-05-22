@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import { ReactComponent as LampIcon } from 'images/icons/Icon_lamp.svg';
 import { ReactComponent as PuzzleIcon } from 'images/icons/Icon_puzzle.svg';
@@ -17,16 +17,24 @@ import {
 } from 'pages/AboutUs/aboutus.styled';
 
 const AboutUs = () => {
+  const contentRef = useRef(null);
+  const handleScrollToContent = () => {
+    if(!contentRef) return;
+    window.scrollTo({
+      top: (contentRef.current.offsetTop - 40),
+      behavior: 'smooth'
+    });
+  }
   return (
     <Box>
-      <MainBanner>
+      <MainBanner onShowMore={handleScrollToContent}>
         <>
           <Typography fontFamily="Inter" variant="h1">TECHGEN</Typography>
           <Typography fontFamily="Montserrat" fontWeight="400" textTransform="uppercase" variant="h3" >#1 uKRAINIAN IT-COMMUNITY</Typography>
         </>
       </MainBanner>
 
-      <Box sx={theme => ({
+      <Box ref={contentRef} sx={theme => ({
         paddingBottom: '60px',
         [theme.breakpoints.up('md')]: {
           paddingBottom: '80px',
@@ -87,6 +95,7 @@ const AboutUs = () => {
                 title='How to learn to code?'
                 description='"Roadmaps" - actual educational schemes that will help in mastering the chosen profession and learning the necessary skills/tools.'
                 link="/roadmaps"
+                disabled
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -95,6 +104,7 @@ const AboutUs = () => {
                 title='Top services for specialist'
                 description='The "Helpful" section is a real treasure for every specialist because there are collected services and sites that will help in education and work.'
                 link="/helpful"
+                disabled
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -103,6 +113,7 @@ const AboutUs = () => {
                 title='Our educational programs'
                 description='Are you just starting your journey in IT or are you looking for opportunities to get practice on real projects after the courses? Go to "Mentorship".'
                 link="/mentorship"
+                disabled
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -111,6 +122,7 @@ const AboutUs = () => {
                 title='Search for an IT job'
                 description='In the "Vacancies" section, you will be able to find not only a convenient search for available vacancies but also several features that will help you get a job.'
                 link="/job"
+                disabled
               />
             </Grid>
             <Grid item xs={12} lg={6}>
@@ -119,6 +131,7 @@ const AboutUs = () => {
                 title='Products and services'
                 description='You can familiarize yourself with the products created by our team or order development services on the "Development" page'
                 link="/development"
+                disabled
               />
             </Grid>
           </CardsBox>

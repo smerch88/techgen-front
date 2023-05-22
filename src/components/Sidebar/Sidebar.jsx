@@ -5,7 +5,7 @@ import { ReactComponent as Helpful } from '../../images/icons/Helpful.svg';
 import { ReactComponent as Vacancies } from '../../images/icons/Vacancies.svg';
 import { ReactComponent as Development } from '../../images/icons/Development.svg';
 import { ReactComponent as AboutUs } from '../../images/icons/Profiles.svg';
-import { Item, Link, List } from './sidebar.styled';
+import { DisabledItem, Item, Link, List } from './sidebar.styled';
 const Sidebar = () => {
   return (
     <aside>
@@ -14,29 +14,29 @@ const Sidebar = () => {
           <Blog width="20px" height="20px" />
           <Link to="/blog">Blog</Link>
         </Item>
-        <Item>
+        <DisabledItem>
           <Roadmaps width="20px" height="20px" />
           <Link to="/roadmaps">Roadmaps</Link>
-        </Item>
-        <Item>
+        </DisabledItem>
+        <DisabledItem>
           <Mentorship width="20px" height="20px" />
           <Link to="/mentorship">Mentorship</Link>
-        </Item>
-        <Item>
+        </DisabledItem>
+        <DisabledItem>
           <Helpful width="20px" height="20px" />
           <Link to="/helpful">Helpful</Link>
-        </Item>
-        <Item>
+        </DisabledItem>
+        <DisabledItem>
           <Vacancies width="20px" height="20px" />
           <Link to="/job">Vacancies</Link>
-        </Item>
-        <Item>
+        </DisabledItem>
+        <DisabledItem>
           <Development width="20px" height="20px" />
           <Link to="/development">Development</Link>
-        </Item>
+        </DisabledItem>
         <Item>
           <AboutUs width="20px" height="20px" />
-          <Link to="/about-us">About us</Link>
+          <Link to="/">About us</Link>
         </Item>
       </List>
     </aside>

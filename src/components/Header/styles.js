@@ -2,6 +2,7 @@ import { styled } from '@mui/system';
 import { Box, AppBar, IconButton, Typography } from '@mui/material';
 import { Link as ReactLink } from 'react-router-dom';
 import theme from 'styles/theme';
+import { CaretDown } from 'phosphor-react';
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   position: 'absolute',
   display: 'flex',
@@ -26,14 +27,12 @@ export const StyledAppBar = styled(AppBar)(({ theme }) => ({
 export const LanguageDropDown = styled(props => (
   <Box {...props}>
     <Typography variant="h2">EN</Typography>
-    <Box width="0.7em" component="img" src={props.src} />
+    <CaretDown weight="bold" />
   </Box>
 ))({
   display: 'flex',
-  paddingRight: '1vw',
-  marginRight: '1vw',
-  borderRight: ' 3px solid white ',
-  zIndex: 100,
+  gap: '8px',
+  alignItems: 'center',
   '&:hover': {
     cursor: 'pointer',
   },
@@ -44,8 +43,13 @@ export const Link = styled(ReactLink)({
   color: theme.palette.text.primary,
 });
 
-export const StyledIconButton = styled(props => (
-  <IconButton onClick={props.handler}>
-    <Box component="img" src={props.src} />
-  </IconButton>
-))();
+export const StyledIconButton = styled(IconButton)(({ theme }) => ({
+  width: '30px',
+  height: '30px',
+  overflow: 'hidden',
+  borderRadius: '8px',
+  color: theme.palette.text.primary,
+  backgroundColor: theme.palette.colorList.darkBlue,
+  fontSize: '1rem',
+  textTransform: 'uppercase'
+}));
