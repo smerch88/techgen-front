@@ -14,6 +14,11 @@ export const Item = styled('li')({
   },
 });
 
+export const DisabledItem = styled(Item)({
+  opacity: '0.6',
+  pointerEvents: 'none'
+})
+
 export const Link = styled(NavLink)({
   textDecoration: 'none',
   marginLeft: ' 12px',
