@@ -5,7 +5,9 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <main style={{flex: 1, display: 'grid', paddingTop: '50px'}}>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );
